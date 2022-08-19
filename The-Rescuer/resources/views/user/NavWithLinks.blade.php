@@ -15,7 +15,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                <li class="nav-item dropdown">
+                {{-- <li class="nav-item dropdown">
 
 
                     <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
@@ -31,61 +31,86 @@
                         <li><a class="dropdown-item" href="{{ url('CHeckHelpStatus') }}">Check help Status</a></li>
                         <li><a class="dropdown-item" href="#">Check Ambulance Status</a></li>
                     </ul>
+                </li> --}}
+                <a class="nav-link " href="{{ url('DoctorHelp') }}" id="navbarScrollingDropdown">
+                    Doctor
+            </a>
+            <a class="nav-link " href="{{ url('DoctorHelp') }}" id="navbarScrollingDropdown">
+                Ambulance
+            </a>
+
+                {{-- <a class="dropdown-item" href="{{ url('DoctorHelp') }}">Doctor help</a> --}}
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link " href="#" id="navbarScrollingDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Police
+                    </a>
+
                 </li>
                 <li class="nav-item dropdown">
+                    <a class="nav-link " href="#" id="navbarScrollingDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Fire
+                    </a>
+
+                </li>
+                <li class="nav-item dropdown">
+
+
                     <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Police Station
+                         Friends
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="#"> Contact police</a></li>
-                        <li><a class="dropdown-item" href="#">See nearby stations</a></li>
+                        <li><a class="dropdown-item" href="">Add Friend</a></li>
+                        <li><a class="dropdown-item" href="">Received Request</a></li>
+                        <li><a class="dropdown-item" href="#">Remove Friend</a></li>
+
+                    </ul>
+                </li>
+                  <li class="nav-item dropdown">
+
+
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                         Complain Status
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="{{ url('CHeckHelpStatus') }}">Check help Status</a></li>
+                        <li><a class="dropdown-item" href="#">Check Ambulance Status</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Fire Station
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="#">Contact Fire station</a></li>
-                        <li><a class="dropdown-item" href="#">Send Information</a></li>
+                        <li><a class="dropdown-item" href="{{ url('CHeckHelpStatus') }}">Check Police help Status</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="#">Check FireStation Status</a></li>
                     </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" id="navbarScrollingDropdown" aria-current="page" href="">Emergency Contact</a>
-                  </li>
-                  @if (Route::has('login'))
-                  @auth
+                    @if (Route::has('login'))
+    @auth
 
-                      <li class="nav-item" id="LoginStatuslayout">
-                          <x-app-layout>
+        <li class="nav-item" id="LoginStatuslayout">
+            <x-app-layout>
 
-                          </x-app-layout>
-                      </li>
-                  @else
-                      <li class="nav-item" >
-                          <a class="nav-link active" aria-current="page" id="btn" href="#">Login</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" id="btn" href="#">Register</a>
-                      </li>
-                      @endif
-                  @endauth
-            </ul>
-            {{-- <form class="d-flex">
+            </x-app-layout>
+        </li>
+    @else
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" id="btn" href="#">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" id="btn" href="#">Register</a>
+        </li>
+        @endif
+    @endauth
+    </ul>
+    {{-- <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form> --}}
-        </div>
+    </div>
     </div>
 </nav>
 
