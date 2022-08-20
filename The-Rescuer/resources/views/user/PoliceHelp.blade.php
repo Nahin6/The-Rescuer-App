@@ -15,7 +15,7 @@
 
     <!-- Style -->
     <link rel="stylesheet" href="{{ url('css/hospital/AddDoctor/style.css') }}">
-
+    <link rel="stylesheet" href="{{ url('css/User/PoliceHelp.css') }}">
     <title>PoliceHelp</title>
 </head>
 
