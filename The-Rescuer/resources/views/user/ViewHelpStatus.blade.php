@@ -17,7 +17,7 @@
 
         <tr>
             <th scope="col">Your Name</th>
-            <th scope="col">Your Disease</th>
+            <th scope="col">You Asked for help of</th>
             <th scope="col">Your Gender</th>
             <th scope="col">Status</th>
             <th scope="col">Cancel Request</th>

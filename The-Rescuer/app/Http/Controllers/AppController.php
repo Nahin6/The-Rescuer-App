@@ -25,11 +25,12 @@ class AppController extends Controller
 
                 }
 
-            // if ($usertype=='Doctor') {
-            // return view('doctor.doctor');
-            // }
+            if ($usertype=='Doctor') {
+            return view('doctor.doctor');
+            }
             if ($usertype=='Hospital') {
                 $AppointmentT =AppointmentT::all();
+                $AppointmentT =DoctorT::all();
                 return view('hospital.HospitalDashboard',compact('AppointmentT'));
                 }
 
