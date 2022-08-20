@@ -46,7 +46,10 @@ Route::controller(UserController::class)->group(function () {
     Route::post('/MakeAppointment','MakeAppointmentFunction' );
     Route::get('/CHeckHelpStatus', 'CHeckHelpStatusFunction');
     Route::get('/CancelRequest/{id}', 'CancelRequestFunction');
+    Route::get('/PoliceHelp', 'PoliceHelpFunction');
 });
+
+
 
 
 Route::middleware([
