@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="{{ url('css/hospital/icon.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/hospital/theme.css') }}">
 
-<nav class="navbar navbar-dark  navbar-expand-lg  " id="navbar" ">
+<nav class="navbar navbar-dark  navbar-expand-lg  " id="navbar" >
     <div class="container-fluid">
         <a class="navbar-brand" id="navbarScrollingDropdown" href="{{ url('/redirects') }}">The Rescuer</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
@@ -34,20 +34,18 @@
                 </li> --}}
                 <a class="nav-link " href="{{ url('DoctorHelp') }}" id="navbarScrollingDropdown">
                     Doctor
-            </a>
-            <a class="nav-link " href="{{ url('DoctorHelp') }}" id="navbarScrollingDropdown">
-                Ambulance
-            </a>
+                </a>
+                <a class="nav-link " href="{{ url('DoctorHelp') }}" id="navbarScrollingDropdown">
+                    Ambulance
+                </a>
 
-                {{-- <a class="dropdown-item" href="{{ url('DoctorHelp') }}">Doctor help</a> --}}
+                    {{-- <a class="dropdown-item" href="{{ url('DoctorHelp') }}">Doctor help</a> --}}
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link " href="#" id="navbarScrollingDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Police
-                    </a>
 
-                </li>
+                <a class="nav-link " href="{{ url('PoliceHelp') }}" id="navbarScrollingDropdown" >
+                    Police
+                </a>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link " href="#" id="navbarScrollingDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
