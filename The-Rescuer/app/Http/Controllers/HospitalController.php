@@ -48,4 +48,9 @@ class HospitalController extends Controller
         return redirect()->back();
 
     }
+    public function AddAmbulanceFunction()
+    {
+
+        return view('hospital.AddAmbulanceView');
+    }
 }
