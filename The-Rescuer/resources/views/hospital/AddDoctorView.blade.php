@@ -50,7 +50,7 @@
                 Email :</label>
             <input type="email" name="email" placeholder="Email Address " class=" form-control my-3 py-3 p-1"
                 id="form-design" onfocus="this.placeholder=''" onblur="this.placeholder='Email Address '" required
-                autocomplete="off">
+               >
 
             <label for="Department" class="form-label">Enter Department:</label>
             <input type="text" name="Department" placeholder="Department " class=" form-control my-3 py-3 p-1"
@@ -69,7 +69,7 @@
             <input type="file" name="photo" placeholder="Picture " class=" form-control my-3 py-3 p-1"
                 id="photo"onfocus="this.placeholder=''" onblur="this.placeholder='Picture '" > --}}
             <label for="gender" id="gender" style="">
-                Gender :</label>form-design
+                Gender :</label>
 
             <br> <input type="radio" name="gender" value="Male" name="gender" required>
 

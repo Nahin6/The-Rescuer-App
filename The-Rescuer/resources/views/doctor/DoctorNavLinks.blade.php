@@ -34,7 +34,7 @@
 
 
                 <li class="nav-item">
-                    <a class="nav-link active"  id="navbarScrollingDropdown" aria-current="page" href="{{ url('ViewAppointment') }}">View Problems</a>
+                    <a class="nav-link active"  id="navbarScrollingDropdown" aria-current="page" href="{{ url('ViewUserHelpRequests') }}">View Help Requests</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link active"  id="navbarScrollingDropdown" aria-current="page" href="{{ url('AddDoctor') }}">Add Doctors</a>

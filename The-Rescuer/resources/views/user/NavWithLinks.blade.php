@@ -5,6 +5,7 @@
 <link rel="stylesheet" type="text/css" href="{{ url('css/hospital/bootstrap.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/hospital/icon.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/hospital/theme.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url('css/hospital/AddDoctor/style.css') }}">
 
 <nav class="navbar navbar-dark  navbar-expand-lg  " id="navbar" >
     <div class="container-fluid">
@@ -35,7 +36,7 @@
                 <a class="nav-link " href="{{ url('DoctorHelp') }}" id="navbarScrollingDropdown">
                     Doctor
                 </a>
-                <a class="nav-link " href="{{ url('DoctorHelp') }}" id="navbarScrollingDropdown">
+                <a class="nav-link " href="{{ url('AmbulanceHelp') }}" id="navbarScrollingDropdown">
                     Ambulance
                 </a>
 
@@ -89,7 +90,7 @@
                     @if (Route::has('login'))
     @auth
 
-        <li class="nav-item" id="LoginStatuslayout">
+        <li class="nav-item " id="LoginStatuslayout">
             <x-app-layout>
 
             </x-app-layout>
