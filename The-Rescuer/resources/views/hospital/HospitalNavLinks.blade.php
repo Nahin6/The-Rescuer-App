@@ -1,6 +1,6 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+<link rel="stylesheet" type="text/css" href="{{ url('css/style.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/hospital/bootstrap.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/hospital/icon.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/hospital/theme.css') }}">
@@ -38,10 +38,13 @@
                   <li class="nav-item">
                     <a class="nav-link active"  id="navbarScrollingDropdown" aria-current="page" href="{{ url('AddDoctor') }}">Add Doctors</a>
                   </li>
-                    @if (Route::has('login'))
+                  <li class="nav-item">
+                    <a class="nav-link active"  id="navbarScrollingDropdown" aria-current="page" href="{{ url('AddAmbulance') }}">Add Ambulance</a>
+                  </li>
+                     @if (Route::has('login'))
     @auth
 
-        <li class="nav-item">
+        <li class="nav-item" style="margin-left:610px;">
             <x-app-layout>
 
             </x-app-layout>
@@ -56,10 +59,10 @@
         @endif
     @endauth
     </ul>
-    <form class="d-flex">
+    {{-- <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
+    </form> --}}
     </div>
     </div>
 </nav>

@@ -39,6 +39,7 @@ Route::controller(HospitalController::class)->group(function () {
     Route::post('/DoctorInformation', 'AddDoctor');
     Route::get('/ViewAppointment','ViewAppointmentFunction' );
     Route::get('/AppointDoctor/{id}','AppointDoctorFunction' );
+    Route::get('/AddAmbulance','AddAmbulanceFunction' );
 });
 Route::controller(UserController::class)->group(function () {
 
