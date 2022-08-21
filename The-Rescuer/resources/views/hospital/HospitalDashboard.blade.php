@@ -29,4 +29,6 @@
 
 {{-- DoctorList close --}}
 
-
+{{-- footer --}}
+@include('admin.AdminFooter')
+{{-- footer  close--}}

@@ -22,7 +22,9 @@
                                     <p class="text-l mb-0">Patient Age : {{ $Appointment->Age }} </p>
                                     <p class="text-l mb-0">Appointment Status : {{ $Appointment->status }} </p>
                                     <p class="text-l mb-0">Patients Gender : {{ $Appointment->gender }}</p> </p>
+                                    <p class="text-l mb-0">Detail message : {{ $Appointment->Problems }}</p> </p>
                                     <a type="button" class="btn btn-primary bg-black m-2" href="{{ url('AppointDoctor',$Appointment->id) }}">Appoint Doctor</a>
+                                    {{-- @include('hospital.PopPupFormForDoctor') --}}
                                 </div>
 
                             </div>

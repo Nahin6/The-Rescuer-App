@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AppController;
+use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\HospitalController;
 use App\Http\Controllers\UserController;
 use App\Models\doctorT;
@@ -39,6 +40,9 @@ Route::controller(HospitalController::class)->group(function () {
     Route::post('/DoctorInformation', 'AddDoctor');
     Route::get('/ViewAppointment','ViewAppointmentFunction' );
     Route::get('/AppointDoctor/{id}','AppointDoctorFunction' );
+    Route::get('/AddAmbulance','AddAmbulanceFunction' );
+    Route::post('/AddAmbulanceSubmitButton','AddAmbulanceSubmitButtonFunction' );
+
 });
 Route::controller(UserController::class)->group(function () {
 
@@ -47,6 +51,12 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/CHeckHelpStatus', 'CHeckHelpStatusFunction');
     Route::get('/CancelRequest/{id}', 'CancelRequestFunction');
     Route::get('/PoliceHelp', 'PoliceHelpFunction');
+    Route::get('/AmbulanceHelp','AmbulanceHelpFunction' );
+});
+Route::controller(DoctorController::class)->group(function () {
+
+    Route::get('/ViewUserHelpRequests', 'ViewUserHelpRequestsFunction');
+
 });
 
 
