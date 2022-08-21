@@ -31,7 +31,17 @@ class UserController extends Controller
 
     public function PoliceHelpFunction()
     {
-        return view('user.PoliceHelp');
+        if(Auth::id())
+        {
+            $username = Auth::user()->username;
+            $AppointmentT =AppointmentT::where('PatientName',$username)->get();
+
+            return view('user.PoliceHelp');
+        }
+        else
+        {
+            return redirect()->back();
+        }
     }
 
     public function CHeckHelpStatusFunction()
