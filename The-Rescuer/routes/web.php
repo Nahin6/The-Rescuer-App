@@ -47,7 +47,6 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/CHeckHelpStatus', 'CHeckHelpStatusFunction');
     Route::get('/CancelRequest/{id}', 'CancelRequestFunction');
     Route::get('/PoliceHelp', 'PoliceHelpFunction');
-    Route::get('/FireHelp', 'FireHelpFunction');
 });
 
 

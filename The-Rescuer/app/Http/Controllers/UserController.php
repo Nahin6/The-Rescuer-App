@@ -31,11 +31,6 @@ class UserController extends Controller
 
     
 
-    public function FireHelpFunction()
-    {
-        return view('user.FireHelp');
-    }
-
     public function CHeckHelpStatusFunction()
     {
         if(Auth::id())
