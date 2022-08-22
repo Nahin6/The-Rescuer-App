@@ -29,10 +29,7 @@ class UserController extends Controller
         return view('user.GetDoctorHelp');
     }
 
-    public function PoliceHelpFunction()
-    {
-        return view('user.PoliceHelp');
-    }
+    
 
     public function FireHelpFunction()
     {
