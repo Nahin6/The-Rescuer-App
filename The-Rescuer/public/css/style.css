@@ -2,6 +2,7 @@
 
 #navbar {
     background-color: #0f3e74;
+    
 }
 
 /* nav-section */
@@ -110,7 +111,7 @@ margin-left: 410px;
  display: flex;
  flex-direction: row;
     justify-content: right;
-    margin-left: 1200px;
+    margin-left: 700px;
 
 }
 
@@ -119,9 +120,45 @@ margin-left: 410px;
  display: flex;
  flex-direction: row;
     justify-content: right;
-    margin-right: 400px;
+ 
 
 }
+
+.nav-item{
+padding: 5px;
+}
+
+#AboutUs{
+    padding: 200px;
+    text-align:left;
+    font-size: large;
+}
+
+#MedicalHelp{
+    padding: 200px;
+    text-align:left;
+    font-size: large;
+}
+
+#PoliceHelp{
+    padding: 200px;
+    text-align:left;
+    font-size: large;
+}
+
+#FireHelp{
+    padding: 200px;
+    text-align:left;
+    font-size: large;
+}
+
+.HoverAboutUs{
+    text-align: center;
+}
+.HoverAboutUs:hover{
+    color: red;
+}
+
 /* doctorHelpForm */
 
 /* doctorHelpForm */

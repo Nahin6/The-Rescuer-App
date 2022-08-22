@@ -1,3 +1,4 @@
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -46,13 +47,12 @@
                     Police
                 </a>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link " href="#" id="navbarScrollingDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
+                
+               <a class="nav-link " href="{{ url('FireHelp') }}" id="navbarScrollingDropdown">
                         Fire
-                    </a>
+                </a>
 
-                </li>
+                
                 <li class="nav-item dropdown">
 
 

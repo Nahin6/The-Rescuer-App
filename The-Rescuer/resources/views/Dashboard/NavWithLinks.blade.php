@@ -3,7 +3,7 @@
 
 <link rel="stylesheet" type="text/css" href="{{ url('css/style.css') }}">
 
-<nav class="navbar navbar-dark  navbar-expand-lg  " id="navbar" ">
+<nav class="navbar navbar-dark  navbar-expand-lg  sticky-top"  id="navbar" >
     <div class="container-fluid">
         <a class="navbar-brand" id="navbarScrollingDropdown" href="#">The Rescuer</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
@@ -11,14 +11,28 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-                  <li class="nav-item" id="navbutton">
-                    <a class="btn btn-primary" aria-current="page" id="btn" href="{{ route('login') }}">Login</a>
-                  </li>
-                  <li class="nav-item " id="navbutton-one">
-                    <a class="btn btn-primary " aria-current="page" id="btn" href="{{ route('register') }}">Register</a>
-                  </li>
-            </ul>
+        <ul class="navbar-nav mr-auto">
 
+            <li class="nav-item" >
+                <a class="nav-link active" aria-current="page" href="#AboutUs">About_Us</a>
+            </li>
+            <li class="nav-item" >
+                <a class="nav-link" href="#MedicalHelp">Medical_Help</a>
+            </li>
+            <li class="nav-item" >
+                <a class="nav-link" href="#PoliceHelp">Police_Help</a>
+            </li>
+            <li class="nav-item" >
+                <a class="nav-link" href="#FireHelp">Fire_Help</a>
+            </li>
+            <li class="nav-item" id="navbutton">
+                <a class="btn btn-primary" aria-current="page" id="btn" href="{{ route('login') }}">Login</a>
+            </li>
+            <li class="nav-item " id="navbutton-one">
+                <a class="btn btn-primary " aria-current="page" id="btn" href="{{ route('register') }}">Register</a>
+            </li>
+                  
+        </ul>
         </div>
     </div>
 </nav>
