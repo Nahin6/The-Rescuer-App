@@ -1,32 +1,110 @@
-<!doctype html>
-<html lang="en">
+<html>
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-    <!-- Bootstrap CSS v5.2.0-beta1 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js"></script>
+    <style>
+        #map {
+        height: 650px;
+        /* The height is 400 pixels */
+        width: 70%;
+        /* The width is the width of the web page */
+        margin-left: 250px;
+        }
+        #header{
+          text-align: center;
+          font-size: 50px;
+        }
+    </style>
 
   </head>
+
   <body>
-    <button id="CurrentLocation">Refresh location</button>
+    <h1 id="header">Your Current location</h1>
+    <!--The div element for the map -->
+   
     
-    <script type="text/javascript" >
-      const CurrentLocation = document.querySelector("CurrentLocation")
-      CurrentLocation.addEventListener("click",()=>{
-        navigator.geolocation.getCurrentPosition(
-          data=>{console.log(data);},
-          error => console.log(data);
-        );
-      });
-      
-    </script>
+    <div id="map"></div>
+<script>
+var map;
+var myLatLng;
+$(document).ready(function() {
+    geoLocationInit();
+});
+    function geoLocationInit() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(success, fail);
+        } else {
+            alert("Browser not supported");
+        }
+    }
 
+    function success(position) {
+        console.log(position);
+        var latval = position.coords.latitude;
+        var lngval = position.coords.longitude;
+        myLatLng = new google.maps.LatLng(latval, lngval);
+        createMap(myLatLng);
+        // nearbySearch(myLatLng, "school");
+        searchGirls(latval,lngval);
+    }
 
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    function fail() {
+        alert("it fails");
+    }
+    //Create Map
+    function createMap(myLatLng) {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: myLatLng,
+            zoom: 12
+        });
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map
+        });
+    }
+    //Create marker
+    function createMarker(latlng, icn, name) {
+        var marker = new google.maps.Marker({
+            position: latlng,
+            map: map,
+            icon: icn,
+            title: name
+        });
+    }
+   
+    function searchGirls(lat,lng){
+        $.post('http://localhost/api/searchGirls',{lat:lat,lng:lng},function(match){
+            // console.log(match);
+            $('#girlsResult').html('');
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
-  </body>
-</html>
+            $.each(match,function(i,val){
+                var glatval=val.lat;
+                var glngval=val.lng;
+                var gname=val.name;
+                var GLatLng = new google.maps.LatLng(glatval, glngval);
+                var gicn= 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+                createMarker(GLatLng,gicn,gname);
+                var html='<h5><li>'+gname+'</li></h5>';
+                $('#girlsResult').append(html);
+            });
+
+              // $.each(match, function(i, val) {
+              //   console.log(val.name);
+              // });
+        });
+    }
+
+    $('#searchGirls').submit(function(e){
+       e.preventDefault();
+        var val=$('#locationSelect').val();
+        $.post('http://localhost/api/getLocationCoords',{val:val},function(match){
+
+            var myLatLng = new google.maps.LatLng(match[0],match[1]);
+            createMap(myLatLng);
+            searchGirls(match[0],match[1]);
+        });
+    });
+  </script>
