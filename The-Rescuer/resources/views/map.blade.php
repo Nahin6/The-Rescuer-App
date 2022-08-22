@@ -55,7 +55,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
                 src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDRfh_HvdqylaziKyQMZ1ADuI0vlfBshEY
     &q=Space+Needle,Seattle+WA">
-            </iframe </div>
+            </iframe >
 
             <input type="submit" class="btn btn-primary">
     </form>

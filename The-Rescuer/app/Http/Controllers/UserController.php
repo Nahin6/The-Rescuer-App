@@ -54,7 +54,7 @@ class UserController extends Controller
         }
         else
         {
-            return redirect()->back();
+            return view('auth.login');
         }
     }
 
