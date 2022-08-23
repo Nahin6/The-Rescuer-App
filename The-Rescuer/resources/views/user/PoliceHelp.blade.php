@@ -26,7 +26,7 @@
     {{-- nav  close --}}
     
     <div id="police_help">
-        <p>The Police is on the way</p>
+        <p>Police help requested</p>
     </div>
 
     </section>

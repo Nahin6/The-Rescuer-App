@@ -47,9 +47,7 @@ class UserController extends Controller
     {
         if(Auth::id())
         {
-            $username = Auth::user()->username;
-            $AppointmentT =AppointmentT::where('PatientName',$username)->get();
-
+            
             return view('user.PoliceHelp');
         }
         else

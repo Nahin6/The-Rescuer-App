@@ -29,7 +29,7 @@
 {{-- DoctorList close --}}
 
 {{-- see map --}}
-@include('user.UserMap2')
+@include('user.MapPractice')
 {{-- see map close--}}
 
 {{-- footer --}}
