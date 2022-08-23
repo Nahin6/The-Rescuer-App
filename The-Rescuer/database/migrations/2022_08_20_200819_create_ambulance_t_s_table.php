@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('AmbulanceRegNo')->unique();
             $table->string('DriverName');
+            $table->string('hospital_id');
             $table->string('DriverNumber')->unique();;
             $table->string('HospitalName');
             $table->timestamps();
