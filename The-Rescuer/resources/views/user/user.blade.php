@@ -33,7 +33,7 @@
 {{-- DoctorList close --}}
 
 {{-- see map --}}
-@include('user.UserMap')
+@include('user.UserMap2')
 {{-- see map close--}}
 
 {{-- footer --}}

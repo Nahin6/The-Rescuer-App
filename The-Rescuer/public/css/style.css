@@ -32,7 +32,7 @@
     color: rgb(195, 14, 14);
 }
 #LoginStatuslayout{
-margin-left: 410px;
+margin-left: 300px;
 
 }
 
@@ -117,10 +117,9 @@ margin-left: 410px;
 
 #navbutton-one{
 
- display: flex;
- flex-direction: row;
+    display: flex;
+    flex-direction: row;
     justify-content: right;
-    
 }
 
 .nav-item{
