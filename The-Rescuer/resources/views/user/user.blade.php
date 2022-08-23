@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +29,7 @@
 {{-- DoctorList close --}}
 
 {{-- see map --}}
-@include('user.UserMap')
+@include('user.UserMap2')
 {{-- see map close--}}
 
 {{-- footer --}}
