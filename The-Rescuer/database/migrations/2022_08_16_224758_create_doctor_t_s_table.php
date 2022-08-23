@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('Position');
             $table->string('DoctorDOB');
             $table->string('gender');
+            $table->string('hospital_ID');
             $table->timestamps();
         });
     }

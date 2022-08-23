@@ -1,6 +1,29 @@
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <x-guest-layout>
+
+    {{-- <script type="text/javascript">
+        $(document).ready(function() {
+            var autoComplete;
+            var id = 'address';
+            autoComplete = new google.maps.places.Autocomplete(document.getElementById(id)), {
+                types: ['geocode'],
+            };
+
+            google.maps.event.addListener(autoComplete, 'place_changed', function() {
+                var place = autoComplete.getPlace();
+
+            });
+
+
+        });
+    </script> --}}
+
+
+
+
+
+
     <x-jet-authentication-card>
         <x-slot name="logo">
             {{-- <x-jet-authentication-card-logo /> --}}
@@ -35,7 +58,8 @@
             </div>
             <div class="mt-4">
                 <x-jet-label for="adress" value="{{ __('Adress') }}" />
-                <x-jet-input id="adress" class="block mt-1 w-full" type="text" name="adress" :value="old('adress')" required />
+                <x-jet-input id="adress" class="block mt-1 w-full" type="text" name="adress" :value="old('adress')" autocomplete="off" required />
+
             </div>
             <div class="mt-4">
                 <x-jet-label for="nid" value="{{ __('NID') }}" />
@@ -122,5 +146,17 @@
         </form>
     </x-jet-authentication-card>
 </x-guest-layout>
+
+
+
+
+
+
+
+
+
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsiSPDMZVYMdkPXe8PNMn4NVKd7TLGYdA&libraries=places"
+type="text/javascript"></script>
