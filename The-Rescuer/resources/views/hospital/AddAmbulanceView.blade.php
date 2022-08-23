@@ -45,7 +45,7 @@
                 onblur="this.placeholder='Driver Contact Number'" required>
             <br> <br>
 
-            <button type="submit" name="submitButton" class="btn my-2 py-2" id="button-login">Add  Ambulance</button>
+            <button type="submit" name="submitButton" class="btn my-2 py-2" id="button-login">Add Ambulance</button>
 
 
 

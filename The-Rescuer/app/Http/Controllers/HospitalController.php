@@ -27,7 +27,7 @@ class HospitalController extends Controller
             $doctorT->Position = $request->Position;
             $doctorT->DoctorDOB = $request->DoctorDOB;
             $doctorT->gender = $request->gender;
-
+            $doctorT->hospital_ID = Auth::User()->id;
 
             $doctorT->save();
             return redirect()->back()->with('success', 'Doctor Added Successfully');
@@ -88,7 +88,7 @@ class HospitalController extends Controller
             $AmbulanceT->DriverName = $request->DriverName;
             $AmbulanceT->DriverNumber = $request->DriverNumber;
             $AmbulanceT->HospitalName = Auth::user()->firstname;
-            $AmbulanceT->hospital_id = $request->Auth::user()->id;
+            $AmbulanceT->hospital_id = Auth::user()->id;
             $AmbulanceT->save();
 
             return redirect()->back()->with('success', 'Ambulance Added Successfully');
