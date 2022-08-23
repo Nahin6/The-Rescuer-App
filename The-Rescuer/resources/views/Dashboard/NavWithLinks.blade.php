@@ -14,18 +14,18 @@
         <ul class="navbar-nav mr-auto">
 
             <li class="nav-item" >
-                <a class="nav-link active" aria-current="page" href="#AboutUs">About_Us</a>
+                <a class="nav-link active" aria-current="page" href="#AboutUs">About Us</a>
             </li>
             <li class="nav-item" >
-                <a class="nav-link" href="#MedicalHelp">Medical_Help</a>
+                <a class="nav-link active" href="#MedicalHelp">Medical Help</a>
+            </li>
+            <li class="nav-item " >
+                <a class="nav-link active" href="#PoliceHelp">Police Help</a>
             </li>
             <li class="nav-item" >
-                <a class="nav-link" href="#PoliceHelp">Police_Help</a>
+                <a class="nav-link active" href="#FireHelp">Fire Help</a>
             </li>
-            <li class="nav-item" >
-                <a class="nav-link" href="#FireHelp">Fire_Help</a>
-            </li>
-            <li class="nav-item" id="navbutton">
+            <li class="nav-item active" id="navbutton">
                 <a class="btn btn-primary" aria-current="page" id="btn" href="{{ route('login') }}">Login</a>
             </li>
             <li class="nav-item " id="navbutton-one">
