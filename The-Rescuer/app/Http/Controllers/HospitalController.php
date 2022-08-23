@@ -58,11 +58,11 @@ class HospitalController extends Controller
     {
         if (Auth::id()) {
             $AppointmentT = AppointmentT::find($id);
-            $AppointmentT->status = 'Accepted';
+            $AppointmentT->status = 'Approved Please wait for doctor response';
             $AppointmentT->save();
             $doctorT = doctorT::all();
-            return view('hospital.AppointDoctorView', compact('doctorT'));
-
+            // return view('hospital.AppointDoctorView', compact('doctorT'));
+            return redirect()->back();
         } else {
             return view('auth.login');
         }
@@ -88,6 +88,7 @@ class HospitalController extends Controller
             $AmbulanceT->DriverName = $request->DriverName;
             $AmbulanceT->DriverNumber = $request->DriverNumber;
             $AmbulanceT->HospitalName = Auth::user()->firstname;
+            $AmbulanceT->hospital_id = $request->Auth::user()->id;
             $AmbulanceT->save();
 
             return redirect()->back()->with('success', 'Ambulance Added Successfully');

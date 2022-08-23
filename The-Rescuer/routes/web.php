@@ -30,10 +30,12 @@ $AppointmentT =AppointmentT::all();
 //         return view('location' );
 //     });
 
-Route::get('/redirects', [AppController::class,'LoginFunction'] );
+// Route::get('/redirects', [AppController::class,'LoginFunction'] );
 // Route::get('/AddDoctor', [HospitalController::class,'AddDoctorFunction'] );
 // Route::post('/DoctorInformation', [HospitalController::class,'AddDoctor'] );
-
+Route::controller(AppController::class)->group(function (){
+    Route::get('/redirects','LoginFunction' );
+});
 
 Route::controller(HospitalController::class)->group(function () {
     Route::get('/AddDoctor','AddDoctorFunction' );
