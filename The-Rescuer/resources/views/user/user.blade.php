@@ -16,7 +16,7 @@
     @include('Dashboard.CoverPhoto')
 
 {{-- welcomeMEssage  --}}
-@include('hospital.welcomeMessage')
+{{-- @include('hospital.welcomeMessage') --}}
 {{-- welcomeMEssage close --}}
 
 
@@ -24,7 +24,7 @@
 
 {{-- DoctorList --}}
 
-@include('hospital.SeeDoctor')
+{{-- @include('hospital.SeeDoctor') --}}
 
 {{-- DoctorList close --}}
 
