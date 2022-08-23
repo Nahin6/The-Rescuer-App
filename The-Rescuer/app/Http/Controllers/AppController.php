@@ -19,6 +19,10 @@ class AppController extends Controller
             return view('police.police');
                 }
 
+            if ($usertype=='PoliceStation') {
+                return view('PoliceStation.PoliceStationDashboard');
+                    }
+
             if ($usertype=='0') {
                 $doctorT =doctorT::all();
             return view('user.user', compact('doctorT'));

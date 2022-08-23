@@ -18,27 +18,7 @@
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                 
                    
-                <a class="nav-link " href="{{ url('AddPolice') }}" id="navbarScrollingDropdown">
-                    Complains History
-                </a>
-
-                <a class="nav-link " href="{{ url('AmbulanceHelp') }}" id="navbarScrollingDropdown">
-                    Ambulance
-                </a>
-
-                <a class="nav-link " href="{{ url('PoliceHelp') }}" id="navbarScrollingDropdown" >
-                    Add Police
-                </a>
-
                 <li class="nav-item dropdown">
-                    <a class="nav-link " href="#" id="navbarScrollingDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Fire
-                    </a>
-
-                </li>
-                <li class="nav-item dropdown">
-
 
                     <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -51,25 +31,7 @@
 
                     </ul>
                 </li>
-                  <li class="nav-item dropdown">
-
-
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                         Complain Status
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="{{ url('CHeckHelpStatus') }}">Check help Status</a></li>
-                        <li><a class="dropdown-item" href="#">Check Ambulance Status</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="{{ url('CHeckHelpStatus') }}">Check Police help Status</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Check FireStation Status</a></li>
-                    </ul>
+                  
                     @if (Route::has('login'))
     @auth
 
