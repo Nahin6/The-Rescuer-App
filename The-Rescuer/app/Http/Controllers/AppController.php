@@ -39,7 +39,7 @@ class AppController extends Controller
                 }
 
             if ($usertype=='FireStation') {
-            return view('FireStation.FireStationHome');
+            return view('FireStation.FireStationDashboard');
             }
             else{
                 return view('Dashboard.home');
