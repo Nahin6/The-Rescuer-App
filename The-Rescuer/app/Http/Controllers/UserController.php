@@ -13,6 +13,7 @@ class UserController extends Controller
     public function MakeAppointmentFunction(Request $request)
     {
         if (Auth::id()) {
+
             $AppointmentT = new AppointmentT;
             $AppointmentT->PatientName = Auth::user()->username;
             $AppointmentT->Address = Auth::user()->adress;
@@ -25,7 +26,7 @@ class UserController extends Controller
 
 
             $AppointmentT->save();
-            return redirect()->back()->with('confirmation', 'Appointment Sent Successfully Please wait for Doctor Response');
+            return redirect()->back()->with('confirmation', 'Request Sent Successfully Please wait for Doctor Response');
         } else {
             return view('auth.login');
         }
@@ -45,15 +46,12 @@ class UserController extends Controller
     //ratul
     public function PoliceHelpFunction()
     {
-        if(Auth::id())
-        {
+        if (Auth::id()) {
             $username = Auth::user()->username;
-            $AppointmentT =AppointmentT::where('PatientName',$username)->get();
+            $AppointmentT = AppointmentT::where('PatientName', $username)->get();
 
             return view('user.PoliceHelp');
-        }
-        else
-        {
+        } else {
             return view('auth.login');
         }
     }
