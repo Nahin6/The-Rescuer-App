@@ -23,11 +23,8 @@
             <option value="{{ $Doctor->username }}">{{ $Doctor->username }}</option>
             @endforeach
         </select>
-        <label for="Address" class="form-label mt-4">Your Age:</label>
-        <input type="text" name="Age" placeholder="Age" class=" form-control my-3 py-3 p-1"
-            id="form-design"onfocus="this.placeholder=''" onblur="this.placeholder='Age '" required>
 
-        <label for="Address" class="form-label mt-4">Describe your Problems:</label>
+        <label for="Address" class="form-label mt-4">Give a message:</label>
         <input type="textarea" name="Problems" placeholder="Details " class=" form-control my-3 py-3 p-1"
             id="form-designText"onfocus="this.placeholder=''" onblur="this.placeholder='Details '" required>
 {{--
@@ -41,12 +38,7 @@
         <label for="fe">Female</label> --}}
         <br> <br>
 
-        <button type="submit" name="submitButton" class="btn my-2 py-2" id="button-login">Submit
-            Request</button>
-
-
-
-
+        <button type="submit" name="submitButton" class="btn my-2 py-2" id="button-login">Send To Doctor</button>
 
     </form>
 

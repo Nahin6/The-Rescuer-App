@@ -62,9 +62,9 @@
                          Friends
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="">Add Friend</a></li>
-                        <li><a class="dropdown-item" href="">Received Request</a></li>
-                        <li><a class="dropdown-item" href="#">Remove Friend</a></li>
+                        <li><a class="dropdown-item"id="dropItems" href="">Add Friend</a></li>
+                        <li><a class="dropdown-item"id="dropItems" href="">Received Request</a></li>
+                        <li><a class="dropdown-item"id="dropItems" href="#">Remove Friend</a></li>
 
                     </ul>
                 </li>
@@ -76,16 +76,16 @@
                          Complain Status
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="{{ url('CHeckHelpStatus') }}">Check help Status</a></li>
-                        <li><a class="dropdown-item" href="#">Check Ambulance Status</a></li>
+                        <li><a class="dropdown-item"id="dropItems" href="{{ url('CHeckHelpStatus') }}">Check help Status</a></li>
+                        <li><a class="dropdown-item"id="dropItems" href="#">Check Ambulance Status</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="{{ url('CHeckHelpStatus') }}">Check Police help Status</a></li>
+                        <li><a class="dropdown-item"id="dropItems" href="{{ url('CHeckHelpStatus') }}">Check Police help Status</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Check FireStation Status</a></li>
+                        <li><a class="dropdown-item"id="dropItems" href="#">Check FireStation Status</a></li>
                     </ul>
                     @if (Route::has('login'))
     @auth

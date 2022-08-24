@@ -14,7 +14,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarScrollingDropdown">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                   
+
                 <li class="nav-item">
                     <a class="nav-link active" href="#">Complains History</a>
                 </li>
@@ -24,13 +24,13 @@
                          Police
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Add Police</a></li>
-                        <li><a class="dropdown-item" href="#">Remove Police</a></li>
-                        <li><a class="dropdown-item" href="#">Check police list</a></li>
+                        <li><a class="dropdown-item" id="dropItems"id="dropItems" href="#">Add Police</a></li>
+                        <li><a class="dropdown-item" id="dropItems"  href="#">Remove Police</a></li>
+                        <li><a class="dropdown-item" id="dropItems" href="#">Check police list</a></li>
                     </ul>
 
                 </li>
-                  
+
                 @if (Route::has('login'))
     @auth
 
