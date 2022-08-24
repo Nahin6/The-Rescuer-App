@@ -36,6 +36,13 @@ margin-left: 300px;
 
 }
 
+#dropItems:hover{
+
+background-color: rgb(248, 33, 0);
+    color: rgb(255, 255, 255);
+    transition: 0.8s;
+}
+
 /* nav-section */
 
 .img {
@@ -125,31 +132,31 @@ margin-left: 300px;
 .nav-item{
     padding: 5px;
     }
-    
+
 #AboutUs{
         padding: 200px;
         text-align:left;
         font-size: large;
 }
-    
+
 #MedicalHelp{
         padding: 200px;
         text-align:left;
         font-size: large;
 }
-    
+
 #PoliceHelp{
         padding: 200px;
         text-align:left;
         font-size: large;
 }
-    
+
 #FireHelp{
         padding: 200px;
         text-align:left;
         font-size: large;
 }
-    
+
 .HoverAboutUs{
         text-align: center;
 }
