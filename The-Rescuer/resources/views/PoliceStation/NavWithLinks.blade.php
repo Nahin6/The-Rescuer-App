@@ -24,7 +24,7 @@
                          Police
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Add Police</a></li>
+                        <li><a class="dropdown-item" href="{{ url('AddPolice') }}">Add Police</a></li>
                         <li><a class="dropdown-item" href="#">Remove Police</a></li>
                         <li><a class="dropdown-item" href="#">Check police list</a></li>
                     </ul>

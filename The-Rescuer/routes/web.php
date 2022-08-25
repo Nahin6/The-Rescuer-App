@@ -61,6 +61,12 @@ Route::controller(DoctorController::class)->group(function () {
 
 });
 
+Route::controller(PoliceStationController::class)->group(function () {
+
+    Route::get('/AddPolice', 'AddPoliceFunction');
+
+});
+
 
 
 
