@@ -15,15 +15,19 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
+
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                 
+
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+
                 <li>
                     <a class="nav-link " href="{{ url('#') }}" id="navbarScrollingDropdown">
                         Complain History
                     </a>
-                </li> 
+                </li>
 
-               
+
                 <li class="nav-item dropdown">
 
 
@@ -32,14 +36,18 @@
                          Fire fighters
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="">Add firefighters</a></li>
-                        <li><a class="dropdown-item" href="">Remove firefighters</a></li>
-                        <li><a class="dropdown-item" href="#">Check firefighters list</a></li>
+                        <li><a class="dropdown-item" id="dropItems" href="">Add firefighters</a></li>
+                        <li><a class="dropdown-item" id="dropItems" href="">Remove firefighters</a></li>
+                        <li><a class="dropdown-item" id="dropItems" href="#">Check firefighters list</a></li>
 
                     </ul>
                 </li>
+<<<<<<< HEAD
             
                   
+=======
+
+>>>>>>> b19f85deb3560dd545baad96e39676b23fc6fa1a
         @if (Route::has('login'))
     @auth
 
