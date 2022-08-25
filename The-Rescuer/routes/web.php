@@ -7,6 +7,7 @@ use App\Http\Controllers\HospitalController;
 use App\Http\Controllers\UserController;
 use App\Models\doctorT;
 use App\Models\AppointmentT;
+use App\Http\Controllers\PSController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,6 +49,7 @@ Route::controller(HospitalController::class)->group(function () {
     Route::get('/RemoveDoctor/{id}','RemoveDoctorFunction' );
     Route::get('/RemoveAmbulance/{id}','RemoveAmbulanceFunction' );
     Route::get('/SeeAmbulanceList','SeeAmbulanceListFunction' );
+    
 });
 Route::controller(UserController::class)->group(function () {
 
@@ -64,10 +66,10 @@ Route::controller(DoctorController::class)->group(function () {
 
 });
 
-Route::controller(PoliceStationController::class)->group(function () {
+Route::controller(PSController::class)->group(function () {
 
-    Route::get('/AddPolice', 'AddPoliceFunction');
-
+    Route::get('/AddPolice','AddPoliceFunction' );
+    Route::post('/SubmitPolice','SubmitPoliceFunction' );
 });
 
 
