@@ -7,14 +7,21 @@ use Illuminate\Http\Request;
 use App\Models\doctorT;
 use App\Models\AppointmentT;
 use App\Models\AmbulanceT;
+use App\Models\User;
+use Google\Service\CloudSearch\Id;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\Hash;
+use mail;
 class HospitalController extends Controller
 {
-
+    // doctor form:
     public function AddDoctor(Request $request)
     {
 
         if (Auth::id()) {
+
             $doctorT = new doctorT;
             $doctorT->first_name = $request->first_name;
             $doctorT->last_name = $request->last_name;
@@ -30,11 +37,28 @@ class HospitalController extends Controller
             $doctorT->hospital_ID = Auth::User()->id;
 
             $doctorT->save();
+            $password = Str::random(8);
+            User::insert([
+
+                'firstname'=>$request->first_name,
+                'lastname'=>$request->last_name,
+                'username'=>$request->username,
+                'phone'=>$request->ContactNumber,
+                'adress'=>$request->Address,
+                'usertype'=>$request->usertype='Doctor',
+                'gender'=>$request->gender,
+                'email'=>$request->email,
+                'dob'=>$request->DoctorDOB,
+                'password'=>$request->password='12345678',
+
+
+            ]);
             return redirect()->back()->with('success', 'Doctor Added Successfully');
         } else {
             return view('auth.login');
         }
     }
+
     public function AddDoctorFunction()
     {
         if (Auth::id()) {
@@ -60,9 +84,10 @@ class HospitalController extends Controller
             $AppointmentT = AppointmentT::find($id);
             $AppointmentT->status = 'Approved Please wait for doctor response';
             $AppointmentT->save();
-            $doctorT = doctorT::all();
-            // return view('hospital.AppointDoctorView', compact('doctorT'));
-            return redirect()->back();
+            $doctorT = Auth::user()->id;
+            $doctorT = doctorT::where('hospital_ID', $doctorT)->get();
+            return view('hospital.AppointDoctorView', compact('doctorT'));
+          
         } else {
             return view('auth.login');
         }
@@ -97,4 +122,65 @@ class HospitalController extends Controller
         }
     }
 
+    public function SeeDoctorListFunction()
+    {
+
+        if (Auth::id()) {
+
+
+            $doctorT = Auth::user()->id;
+            $doctorT = doctorT::where('hospital_ID', $doctorT)->get();
+
+            return view('hospital.SeeDoctorList', compact('doctorT'));
+        } else {
+
+            return view('auth.login');
+        }
+    }
+
+    public function RemoveDoctorFunction($id)
+    {
+
+        if (Auth::id()) {
+
+
+            $doctorT = doctorT::find($id);
+            $doctorT->delete();
+            return redirect()->back();
+        } else {
+
+            return view('auth.login');
+        }
+    }
+
+    public function SeeAmbulanceListFunction()
+    {
+
+        if (Auth::id()) {
+
+
+            $AmbulanceT = Auth::user()->id;
+            $AmbulanceT = AmbulanceT::where('hospital_id', $AmbulanceT)->get();
+            return view('hospital.SeeAmbulanceList' ,compact('AmbulanceT'));
+        } else {
+
+            return view('auth.login');
+        }
+    }
+    public function RemoveAmbulanceFunction($id)
+    {
+
+        if (Auth::id()) {
+
+
+            $AmbulanceT = AmbulanceT::find($id);
+            $AmbulanceT->delete();
+            return redirect()->back();
+        } else {
+
+            return view('auth.login');
+        }
+    }
+
 }
+

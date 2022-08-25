@@ -44,7 +44,10 @@ Route::controller(HospitalController::class)->group(function () {
     Route::get('/AppointDoctor/{id}','AppointDoctorFunction' );
     Route::get('/AddAmbulance','AddAmbulanceFunction' );
     Route::post('/AddAmbulanceSubmitButton','AddAmbulanceSubmitButtonFunction' );
-
+    Route::get('/SeeDoctorList','SeeDoctorListFunction' );
+    Route::get('/RemoveDoctor/{id}','RemoveDoctorFunction' );
+    Route::get('/RemoveAmbulance/{id}','RemoveAmbulanceFunction' );
+    Route::get('/SeeAmbulanceList','SeeAmbulanceListFunction' );
 });
 Route::controller(UserController::class)->group(function () {
 

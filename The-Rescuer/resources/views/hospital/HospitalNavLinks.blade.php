@@ -33,19 +33,53 @@
                 </li> --}}
 
 
+                <li class="nav-item dropdown">
+
+
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Doctor
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+
+                        <li><a class="dropdown-item" id="dropItems" href="{{ url('AddDoctor') }}">Add Doctors</a></li>
+                        <li><a class="dropdown-item" id="dropItems" href="{{ url('SeeDoctorList') }}">Doctor List</a></li>
+
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+
+
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Ambulance
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+
+                        <li><a class="dropdown-item" id="dropItems" href="{{ url('AddAmbulance') }}">Add Ambulance</a></li>
+                        <li><a class="dropdown-item" id="dropItems" href="{{ url('SeeAmbulanceList') }}">See Ambulance</a></li>
+                       
+
+                    </ul>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link active"  id="navbarScrollingDropdown" aria-current="page" href="{{ url('ViewAppointment') }}">View Problems</a>
                   </li>
-                  <li class="nav-item">
+                  {{-- <li class="nav-item">
                     <a class="nav-link active"  id="navbarScrollingDropdown" aria-current="page" href="{{ url('AddDoctor') }}">Add Doctors</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link active"  id="navbarScrollingDropdown" aria-current="page" href="{{ url('AddAmbulance') }}">Add Ambulance</a>
                   </li>
-                     @if (Route::has('login'))
+
+                  <li class="nav-item">
+                    <a class="nav-link active"  id="navbarScrollingDropdown" aria-current="page" href="{{ url('SeeDoctorList') }}">Doctor List</a>
+                  </li> --}}
+
+                       @if (Route::has('login'))
     @auth
 
-        <li class="nav-item" style="margin-left:610px;">
+        <li class="nav-item" style="margin-left:650px;">
             <x-app-layout>
 
             </x-app-layout>

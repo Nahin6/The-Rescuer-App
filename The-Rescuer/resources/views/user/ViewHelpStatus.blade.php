@@ -30,7 +30,23 @@
                 <td>{{ $Appointment->AppointmentType }}</td>
                 <td>{{ $Appointment->gender }}</td>
                 <td>{{ $Appointment->status }}</td>
-                <td> <a type="button" style="color:rgb(0, 6, 0); background-color:rgb(223, 92, 65)" onClick="return confirm('Are you sure')" class="btn btn-danger  m-2" href="{{ url('CancelRequest',$Appointment->id) }} ">Cancel</a></td>
+
+
+
+
+                <td>   @if ($Appointment->status =='Pending')
+                    <a type="button" style="color:rgb(0, 6, 0); background-color:rgb(223, 92, 65)" onClick="return confirm('Are you sure')" class="btn btn-danger  m-2" href="{{ url('CancelRequest',$Appointment->id) }} ">Cancel</a>
+
+                    @else
+                        <h1  style=" color:rgb(15, 142, 49) ;font-size:26px; font-weight:bold;">Accepted</h1>
+
+
+                    @endif
+                </td>
+
+
+
+
             </tr>
             @endforeach
         </tbody>

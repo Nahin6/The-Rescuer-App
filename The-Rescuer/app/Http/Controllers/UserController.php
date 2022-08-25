@@ -72,10 +72,7 @@ class UserController extends Controller
     //nahin
     public function CancelRequestFunction($id)
     {
-        // { if('AppointmentT=='){
-        //     return view('user.ViewHelpStatus')->with('confirm', 'you hav no appointment');
-
-        // }
+        
         if (Auth::id()) {
             $AppointmentT = AppointmentT::find($id);
             $AppointmentT->delete();
