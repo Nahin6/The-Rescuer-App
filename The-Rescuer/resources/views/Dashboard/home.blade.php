@@ -40,7 +40,7 @@
       <h3>If a person is in a fire related emergency, then he/she can press fire help button. By pressing the button, the user will be sending a message to the fire station that he/she needs firefighters and there is a fire emergency. Through the message the user will be automatically sharing the location of the user and firefighters and fire station will be able to trace the location and send help.</h3>
     </div>
 
-  </div> 
+  </div>
 </div>
 
 </body>

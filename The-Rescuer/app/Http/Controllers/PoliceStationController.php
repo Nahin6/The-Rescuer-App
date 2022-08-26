@@ -8,5 +8,6 @@ use App\Models\AppointmentT;
 
 class PoliceStationController extends Controller
 {
-    //
+   
 }
+

@@ -24,7 +24,7 @@
                          Police
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" id="dropItems"id="dropItems" href="#">Add Police</a></li>
+                        <li><a class="dropdown-item" id="dropItems"id="dropItems" href="">Add Police</a></li>
                         <li><a class="dropdown-item" id="dropItems"  href="#">Remove Police</a></li>
                         <li><a class="dropdown-item" id="dropItems" href="#">Check police list</a></li>
                     </ul>

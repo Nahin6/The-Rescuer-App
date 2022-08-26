@@ -15,4 +15,5 @@ class DoctorController extends Controller
         return view('auth.login');
     }
    }
+
 }
