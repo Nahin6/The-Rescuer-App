@@ -3,6 +3,10 @@
 
 <link rel="stylesheet" type="text/css" href="{{ url('css/style.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/PoliceStation/style.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url('css/hospital/bootstrap.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url('css/hospital/icon.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url('css/hospital/theme.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url('css/hospital/AddDoctor/style.css') }}">
 
 
 <nav class="navbar navbar-dark  navbar-expand-lg  sticky-top" id="navbar" >
@@ -31,8 +35,8 @@
 =======
 
                         <li><a class="dropdown-item" href="{{ url('AddPolice') }}">Add Police</a></li>
-                        <li><a class="dropdown-item" href="#">Remove Police</a></li>
-                        <li><a class="dropdown-item" href="#">Check police list</a></li>
+                        <li><a class="dropdown-item" href="{{ url('AddPolice') }}">Remove Police</a></li>
+                        <li><a class="dropdown-item" href="{{ url('PoliceList') }}">Check police list</a></li>
 
                         
 

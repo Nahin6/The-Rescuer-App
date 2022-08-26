@@ -46,7 +46,10 @@
                     {{-- <a class="dropdown-item" href="{{ url('DoctorHelp') }}">Doctor help</a> --}}
 
 
+
                 <a class="nav-link " href="{{ url('PoliceHelp') }}" id="navbarScrollingDropdown" >
+
+                <a class="nav-link " href="{{ url('PoliceHelp') }}"  id="navbarScrollingDropdown" >
                     Police
                 </a>
 

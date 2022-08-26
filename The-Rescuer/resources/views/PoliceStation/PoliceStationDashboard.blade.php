@@ -8,7 +8,7 @@
   </head>
   <body >
     @include('PoliceStation.NavWithLinks')
-    <h1>New Complains</h1>
+    @include('user.MapPractice')
 
   </body>
 </html>

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Contact us</title>
+    <title>Add police</title>
     <link rel="stylesheet" type="text/css" href="{{ url('css/PoliceStation/style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
