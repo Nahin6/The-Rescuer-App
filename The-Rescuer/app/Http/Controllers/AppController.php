@@ -32,6 +32,11 @@ class AppController extends Controller
             if ($usertype=='Doctor') {
             return view('doctor.doctor');
             }
+            if ($usertype=='FireFighter') {
+                return view(' FireFighters.FIreFighterDashboard');
+                }
+
+           
             if ($usertype=='Hospital') {
                 $AppointmentT =AppointmentT::all();
                 $doctorT =DoctorT::all();

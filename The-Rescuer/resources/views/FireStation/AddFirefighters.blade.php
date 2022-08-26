@@ -2,19 +2,19 @@
 <html>
 
 <head>
-    <title>Contact us</title>
-    <link rel="stylesheet" type="text/css" href="{{ url('css/PoliceStation/style.css') }}">
+    <title>Fire Station</title>
+    <link rel="stylesheet" type="text/css" href="{{ url('css/FireStation/style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 </head>
 
 <body>
-    @include('PoliceStation.NavWithLinks')
+    @include('FireStation.NavWithLinks')
     <section class="SignUp-section">
 
 
         <form class="col-lg-5 col-md-7 col-sm-8 col-10 shadow p-5 text-center" id="SIgnup-design" method="POST"
-         action="{{url('SubmitPolice')}}" enctype="multipart/form-data">
+         action="{{url('SubmitFirefighters')}}" enctype="multipart/form-data">
             @csrf
             @if (session()->has('success'))
                 <div style="font-weight: 900; font-size: 20px; color: rgb(173, 37, 27);" class="alert alert-success ">
@@ -23,7 +23,7 @@
 
                 </div>
             @endif
-            <p style="font-weight: 900; font-size: 40px; color: rgb(173, 37, 27);"> Add Police</p>
+            <p style="font-weight: 900; font-size: 40px; color: rgb(173, 37, 27);"> Add Firefighters</p>
             <br>
 
 
@@ -75,7 +75,10 @@
             <input type="radio" id="fe" value="Female" name="gender">
             <label for="fe">Female</label> <br> <br>
 
-            <button type="submit" name="submitButton" class="btn my-2 py-2" id="button-login">Add Police</button>
+            <input type="radio" id="others" value="Others" name="gender">
+            <label for="others">Others</label> <br> <br>
+
+            <button type="submit" name="submitButton" class="btn my-2 py-2" id="button-login">Add Firefighters</button>
 
 
         </form>

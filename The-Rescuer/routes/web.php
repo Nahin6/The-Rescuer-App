@@ -9,6 +9,7 @@ use App\Http\Controllers\PoliceStationController;
 use App\Models\doctorT;
 use App\Models\AppointmentT;
 use App\Http\Controllers\PSController;
+use App\Http\Controllers\FireStationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -71,6 +72,13 @@ Route::controller(PSController::class)->group(function () {
 
     Route::get('/AddPolice','AddPoliceFunction' );
     Route::post('/SubmitPolice','SubmitPoliceFunction' );
+    // Route::get('/AddFirefighters','AddFirefightersFunction' );
+});
+
+Route::controller(FireStationController::class)->group(function () {
+
+    Route::get('/AddFirefighters','AddFirefightersFunction' );
+    Route::post('/SubmitFirefighters','SubmitFirefightersFunction' );
 });
 
 

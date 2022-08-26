@@ -163,7 +163,13 @@ background-color: rgb(248, 33, 0);
 .HoverAboutUs:hover{
         color: red;
 }
-
+.firepic{
+    text-align: center;
+}
+.medicalpic{
+    text-align: center;
+    
+}
 /* doctorHelpForm */
 
 /* doctorHelpForm */
