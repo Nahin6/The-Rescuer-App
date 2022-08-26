@@ -15,6 +15,10 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
+
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                
+
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
 
                 <li>
@@ -32,13 +36,14 @@
                          Fire fighters
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" id="dropItems" href="">Add firefighters</a></li>
-                        <li><a class="dropdown-item" id="dropItems" href="">Remove firefighters</a></li>
-                        <li><a class="dropdown-item" id="dropItems" href="#">Check firefighters list</a></li>
+                        <li><a class="dropdown-item" id="dropItems" href="{{ url('AddFirefighters') }}">Add firefighters</a></li>
+                        <li><a class="dropdown-item" id="dropItems" href="{{ url('SeeFirefightersList') }}">Remove firefighters</a></li>
+                        <li><a class="dropdown-item" id="dropItems" href="{{ url('SeeFirefightersList') }}">Check firefighters list</a></li>
 
                     </ul>
                 </li>
 
+            
         @if (Route::has('login'))
     @auth
 
@@ -56,7 +61,7 @@
         </li>
         @endif
     @endauth
-    </ul>
+        </ul>
     {{-- <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>

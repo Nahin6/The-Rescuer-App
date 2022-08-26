@@ -5,9 +5,11 @@ use App\Http\Controllers\AppController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\HospitalController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PoliceStationController;
 use App\Models\doctorT;
 use App\Models\AppointmentT;
 use App\Http\Controllers\PSController;
+use App\Http\Controllers\FireStationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -59,6 +61,9 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/CancelRequest/{id}', 'CancelRequestFunction');
     Route::get('/PoliceHelp', 'PoliceHelpFunction');
     Route::get('/AmbulanceHelp','AmbulanceHelpFunction' );
+    Route::get('/FireHelp', 'FireHelpFunction');
+    Route::get('/AddFriends', 'AddFriendsFunction');
+    Route::post('/SubmitFriends','SubmitFriendsFunction' );
 });
 Route::controller(DoctorController::class)->group(function () {
 
@@ -70,9 +75,22 @@ Route::controller(PSController::class)->group(function () {
 
     Route::get('/AddPolice','AddPoliceFunction' );
     Route::post('/SubmitPolice','SubmitPoliceFunction' );
+
+    // Route::get('/AddFirefighters','AddFirefightersFunction' );
+
     Route::get('/PoliceList','PoliceListFunction' );
     
+
 });
+
+Route::controller(FireStationController::class)->group(function () {
+
+    Route::get('/AddFirefighters','AddFirefightersFunction' );
+    Route::post('/SubmitFirefighters','SubmitFirefightersFunction' );
+    Route::get('/SeeFirefightersList','SeeFirefightersListFunction' );
+    Route::get('/RemoveFirefighters/{id}','RemoveFirefightersFunction' );
+});
+
 
 
 
