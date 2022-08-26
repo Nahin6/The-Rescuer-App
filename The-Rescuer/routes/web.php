@@ -5,6 +5,7 @@ use App\Http\Controllers\AppController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\HospitalController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PoliceStationController;
 use App\Models\doctorT;
 use App\Models\AppointmentT;
 use App\Http\Controllers\PSController;
@@ -79,6 +80,7 @@ Route::controller(FireStationController::class)->group(function () {
     Route::get('/AddFirefighters','AddFirefightersFunction' );
     Route::post('/SubmitFirefighters','SubmitFirefightersFunction' );
 });
+
 
 
 

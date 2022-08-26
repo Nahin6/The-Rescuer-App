@@ -26,7 +26,7 @@ class HospitalController extends Controller
             $doctorT->first_name = $request->first_name;
             $doctorT->last_name = $request->last_name;
             $doctorT->username = $request->username;
-            $doctorT->HospitalName = $request->HospitalName;
+            $doctorT->HospitalName =Auth::User()->firstname;
             $doctorT->email = $request->email;
             $doctorT->ContactNumber = $request->ContactNumber;
             $doctorT->Address = $request->Address;
@@ -50,7 +50,7 @@ class HospitalController extends Controller
                 'email'=>$request->email,
                 'dob'=>$request->DoctorDOB,
                 'password'=>$request->password='12345678',
-
+                
 
             ]);
             return redirect()->back()->with('success', 'Doctor Added Successfully');
@@ -87,7 +87,7 @@ class HospitalController extends Controller
             $doctorT = Auth::user()->id;
             $doctorT = doctorT::where('hospital_ID', $doctorT)->get();
             return view('hospital.AppointDoctorView', compact('doctorT'));
-          
+
         } else {
             return view('auth.login');
         }
