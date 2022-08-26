@@ -167,6 +167,7 @@ class HospitalController extends Controller
             return view('auth.login');
         }
     }
+
     public function RemoveAmbulanceFunction($id)
     {
 
@@ -181,6 +182,6 @@ class HospitalController extends Controller
             return view('auth.login');
         }
     }
-
+   
 }
 
