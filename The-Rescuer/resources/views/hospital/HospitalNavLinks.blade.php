@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="{{ url('css/hospital/theme.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/hospital/AddDoctor/style.css') }}">
 
-<nav class="navbar navbar-dark  navbar-expand-lg  " id="navbar" >
+<nav class="navbar navbar-dark  navbar-expand-lg  " id="navbar">
     <div class="container-fluid">
         <a class="navbar-brand" id="navbarScrollingDropdown" href="{{ url('/redirects') }}">The Rescuer</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
@@ -43,7 +43,8 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
 
                         <li><a class="dropdown-item" id="dropItems" href="{{ url('AddDoctor') }}">Add Doctors</a></li>
-                        <li><a class="dropdown-item" id="dropItems" href="{{ url('SeeDoctorList') }}">Doctor List</a></li>
+                        <li><a class="dropdown-item" id="dropItems" href="{{ url('SeeDoctorList') }}">Doctor List</a>
+                        </li>
 
                     </ul>
                 </li>
@@ -56,16 +57,23 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
 
-                        <li><a class="dropdown-item" id="dropItems" href="{{ url('AddAmbulance') }}">Add Ambulance</a></li>
-                        <li><a class="dropdown-item" id="dropItems" href="{{ url('SeeAmbulanceList') }}">See Ambulance</a></li>
-                       
+                        <li><a class="dropdown-item" id="dropItems" href="{{ url('AddAmbulance') }}">Add Ambulance</a>
+                        </li>
+                        <li><a class="dropdown-item" id="dropItems" href="{{ url('SeeAmbulanceList') }}">See
+                                Ambulance</a></li>
+
 
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active"  id="navbarScrollingDropdown" aria-current="page" href="{{ url('ViewAppointment') }}">View Problems</a>
-                  </li>
-                  {{-- <li class="nav-item">
+                    <a class="nav-link active" id="navbarScrollingDropdown" aria-current="page"
+                        href="{{ url('ViewAppointment') }}">View Problems</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" id="navbarScrollingDropdown" aria-current="page"
+                        href="{{ url('CHeckAmbulanceRequest') }}">Ambulance Request</a>
+                </li>
+                {{-- <li class="nav-item">
                     <a class="nav-link active"  id="navbarScrollingDropdown" aria-current="page" href="{{ url('AddDoctor') }}">Add Doctors</a>
                   </li>
                   <li class="nav-item">
@@ -76,29 +84,29 @@
                     <a class="nav-link active"  id="navbarScrollingDropdown" aria-current="page" href="{{ url('SeeDoctorList') }}">Doctor List</a>
                   </li> --}}
 
-                       @if (Route::has('login'))
-    @auth
+                @if (Route::has('login'))
+                    @auth
 
-        <li class="nav-item" style="margin-left:650px;">
-            <x-app-layout>
+                        <li class="nav-item" style="margin-left:410px;">
+                            <x-app-layout>
 
-            </x-app-layout>
-        </li>
-    @else
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" id="btn" href="#">Login</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" id="btn" href="#">Register</a>
-        </li>
-        @endif
-    @endauth
-    </ul>
-    {{-- <form class="d-flex">
+                            </x-app-layout>
+                        </li>
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" id="btn" href="#">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" id="btn" href="#">Register</a>
+                        </li>
+                    @endif
+                @endauth
+            </ul>
+            {{-- <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
     </form> --}}
-    </div>
+        </div>
     </div>
 </nav>
 

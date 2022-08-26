@@ -36,16 +36,11 @@
                 <li class="nav-item">
                     <a class="nav-link active"  id="navbarScrollingDropdown" aria-current="page" href="{{ url('ViewUserHelpRequests') }}">View Help Requests</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link active"  id="navbarScrollingDropdown" aria-current="page" href="{{ url('AddDoctor') }}">Add Doctors</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active"  id="navbarScrollingDropdown" aria-current="page" href="{{ url('AddAmbulance') }}">Add Ambulance</a>
-                  </li>
+
                      @if (Route::has('login'))
     @auth
 
-        <li class="nav-item" style="margin-left:610px;">
+        <li class="nav-item" style="margin-left:810px;">
             <x-app-layout>
 
             </x-app-layout>
