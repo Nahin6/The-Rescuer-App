@@ -51,7 +51,10 @@ Route::controller(HospitalController::class)->group(function () {
     Route::get('/RemoveDoctor/{id}','RemoveDoctorFunction' );
     Route::get('/RemoveAmbulance/{id}','RemoveAmbulanceFunction' );
     Route::get('/SeeAmbulanceList','SeeAmbulanceListFunction' );
-    
+    Route::post('/AssignDoctor','AssignDoctorFunction' );
+    Route::get('/CHeckAmbulanceRequest','CHeckAmbulanceRequestFunction' );
+    Route::get('/RemoveAmbulanceRequest/{id}','RemoveAmbulanceRequestFunction' );
+    Route::get('/ApproveAmbulanceRequest/{id}','ApproveAmbulanceRequestFunction' );
 });
 Route::controller(UserController::class)->group(function () {
 
@@ -61,11 +64,14 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/CancelRequest/{id}', 'CancelRequestFunction');
     Route::get('/PoliceHelp', 'PoliceHelpFunction');
     Route::get('/AmbulanceHelp','AmbulanceHelpFunction' );
+    Route::post('/RequestForAmbulance','RequestForAmbulanceFunction' );
+    Route::get('/CHeckAmbulanceHelpStatus','CHeckAmbulanceHelpStatusFunction' );
 });
 Route::controller(DoctorController::class)->group(function () {
 
     Route::get('/ViewUserHelpRequests', 'ViewUserHelpRequestsFunction');
-
+    Route::get('/GiveSolutionToUser', 'GiveSolutionToUserFunction');
+    Route::post('/SubmitSolutionToUser', 'SubmitSolutionToUserFunction');
 });
 
 Route::controller(PSController::class)->group(function () {
