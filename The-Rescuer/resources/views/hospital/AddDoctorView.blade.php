@@ -40,9 +40,9 @@
                 username:</label>
             <input type="text" name="username" placeholder="username " class=" form-control my-3 py-3 p-1"
                 id="form-design"onfocus="this.placeholder=''" onblur="this.placeholder='username '" required>
-            <label for="HospitalName" class="form-label">Hospital Name:</label>
+            {{-- <label for="HospitalName" class="form-label">Hospital Name:</label>
             <input type="text" name="HospitalName" placeholder="Hospital Name " class=" form-control my-3 py-3 p-1"
-                id="form-design"onfocus="this.placeholder=''" onblur="this.placeholder='Hospital Name '" required>
+                id="form-design"onfocus="this.placeholder=''" onblur="this.placeholder='Hospital Name '" required> --}}
             <label for="ContactNumber" class="form-label">Contact Number:</label>
             <input type="text" name="ContactNumber" placeholder="Contact Number " class=" form-control my-3 py-3 p-1"
                 id="form-design"onfocus="this.placeholder=''" onblur="this.placeholder='Contact Number '" required>
