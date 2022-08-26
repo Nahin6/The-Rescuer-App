@@ -15,6 +15,10 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
+
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                
+
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
 
                 <li>
@@ -38,7 +42,12 @@
 
                     </ul>
                 </li>
+<<<<<<< HEAD
+            
+                  
+=======
 
+>>>>>>> b19f85deb3560dd545baad96e39676b23fc6fa1a
         @if (Route::has('login'))
     @auth
 
@@ -56,7 +65,7 @@
         </li>
         @endif
     @endauth
-    </ul>
+        </ul>
     {{-- <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
