@@ -24,15 +24,15 @@ class PSController extends Controller
             $police_t->last_name = $request->last_name;
             $police_t->first_name = $request->first_name;
             $police_t->username = $request->username;
-            $police_t->HospitalName = $request->HospitalName;
             $police_t->email = $request->email;
             $police_t->ContactNumber = $request->ContactNumber;
             $police_t->Address = $request->Address;
             $police_t->Department = $request->Department;
             $police_t->Position = $request->Position;
-            $police_t->DoctorDOB = $request->DoctorDOB;
+            $police_t->DOB = $request->DOB;
             $police_t->gender = $request->gender;
-            $police_t->hospital_ID = Auth::User()->id;
+            $police_t->PoliceStationID = Auth::User()->id;
+            $police_t->PoliceStationName = Auth::User()->firstname;
 
             $police_t->save();
             $password = Str::random(8);
