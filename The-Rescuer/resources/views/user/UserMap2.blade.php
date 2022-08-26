@@ -49,10 +49,6 @@
      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
     -->
     <script>
-        // Note: This example requires that you consent to location sharing when
-        // prompted by your browser. If you see the error "The Geolocation service
-        // failed.", it means you probably did not give permission for the browser to
-        // locate you.
         let map, infoWindow;
 
         function initMap() {
@@ -68,7 +64,7 @@
         locationButton.classList.add("custom-map-control-button");
         map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
         locationButton.addEventListener("click", () => {
-            // Try HTML5 geolocation.
+            
             if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
                 (position) => {
@@ -88,11 +84,15 @@
             );
            
             } else {
-            // Browser doesn't support Geolocation
+            // If browser doesn't support Geolocation
             handleLocationError(false, infoWindow, map.getCenter());
             }
             
         });
+        const marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+          });
         }
 
         function handleLocationError(browserHasGeolocation, infoWindow, pos) {
