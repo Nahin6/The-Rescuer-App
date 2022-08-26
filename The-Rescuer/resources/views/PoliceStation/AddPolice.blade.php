@@ -78,16 +78,9 @@
             <button type="submit" name="submitButton" class="btn my-2 py-2" id="button-login">Add Police</button>
 
 
-
-
-
         </form>
 
-
-
-        </form>
-
-
+        
 
 
     </section>
