@@ -30,7 +30,7 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
                         <li><a class="dropdown-item" href="{{ url('AddPolice') }}">Add Police</a></li>
-                        <li><a class="dropdown-item" href="{{ url('AddPolice') }}">Remove Police</a></li>
+                        <li><a class="dropdown-item" href="{{ url('deletepolice') }}">Remove Police</a></li>
                         <li><a class="dropdown-item" href="{{ url('PoliceList') }}">Check police list</a></li>
 
                         
