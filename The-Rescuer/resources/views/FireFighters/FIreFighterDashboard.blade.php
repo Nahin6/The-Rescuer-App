@@ -1,0 +1,2 @@
+@include('FireFighters.FIreFighterDashboard')
+dashboard
