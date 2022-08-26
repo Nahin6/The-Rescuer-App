@@ -7,6 +7,9 @@
 <link rel="stylesheet" type="text/css" href="{{ url('css/hospital/theme.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/hospital/AddDoctor/style.css') }}">
 
+<link rel="stylesheet" href="{{ url('css/hospital/AddDoctor/style.css') }}">
+    <link rel="stylesheet" href="{{ url('css/User/PoliceHelp.css') }}">
+
 <nav class="navbar navbar-dark  navbar-expand-lg  sticky-top" id="navbar" >
     <div class="container-fluid">
         <a class="navbar-brand" id="navbarScrollingDropdown" href="{{ url('/redirects') }}">The Rescuer</a>
@@ -43,17 +46,20 @@
                     {{-- <a class="dropdown-item" href="{{ url('DoctorHelp') }}">Doctor help</a> --}}
 
 
-                <a class="nav-link " href="{{ url('PoliceHelp') }}" onClick="return confirm('Are you sure?')" id="navbarScrollingDropdown" >
+
+                <a class="nav-link " href="{{ url('PoliceHelp') }}" id="navbarScrollingDropdown" >
+
+                <a class="nav-link " href="{{ url('PoliceHelp') }}"  id="navbarScrollingDropdown" >
                     Police
                 </a>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link " href="#" id="navbarScrollingDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
+                <li class="nav-link">
+                    <a class="nav-link " href="{{ url('FireHelp') }}" id="navbarScrollingDropdown" >
                         Fire
                     </a>
 
                 </li>
+
                 <li class="nav-item dropdown">
 
 
@@ -62,7 +68,7 @@
                          Friends
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item"id="dropItems" href="">Add Friend</a></li>
+                        <li><a class="dropdown-item"id="dropItems" href="{{ url('AddFriends') }}">Add Friend</a></li>
                         <li><a class="dropdown-item"id="dropItems" href="">Received Request</a></li>
                         <li><a class="dropdown-item"id="dropItems" href="#">Remove Friend</a></li>
 

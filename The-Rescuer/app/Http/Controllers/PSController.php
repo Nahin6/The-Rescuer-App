@@ -8,11 +8,34 @@ use App\Models\Police_t;
 use Illuminate\Support\Str;
 use App\Models\User;
 
+
 class PSController extends Controller
 {
     public function AddPoliceFunction(){
-        return view('PoliceStation.AddPolice');
+        if (Auth::id()) {return view('PoliceStation.AddPolice');}
+        else {return view('auth.login');}
     }
+
+
+
+    public function PoliceListFunction(){
+        if (Auth::id()) {
+            $Police_t = Auth::user()->id;
+            $Police_t = Police_t::where('id', $Police_t)->get();
+            return view('PoliceStation.PoliceList', compact('Police_t'));
+        }
+        else {return view('auth.login');}
+    }
+
+    public function DeletePoliceFunction(){
+        if (Auth::id()) {
+            $Police_t = Auth::user()->id;
+            $Police_t = Police_t::where('id', $Police_t)->get();
+            return view('PoliceStation.deletepolice', compact('Police_t'));
+        }
+        else {return view('auth.login');}
+    }
+
 
     
     public function SubmitPoliceFunction(Request $request)

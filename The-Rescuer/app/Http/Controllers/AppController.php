@@ -16,7 +16,7 @@ class AppController extends Controller
                 }
 
             if ($usertype=='Police') {
-            return view('police.police');
+            return view('police.PoliceDashboard');
                 }
 
             if ($usertype=='PoliceStation') {

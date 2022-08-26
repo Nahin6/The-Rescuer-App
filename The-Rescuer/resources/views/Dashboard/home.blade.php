@@ -33,7 +33,7 @@
 
     <div id="PoliceHelp">
       <h1 class="HoverAboutUs">Police help</h1>
-      
+      @include('Dashboard.Policepic')
       <h3>If a person is in danger and needs police help then he/she can press the police help button and a message to the nearest police station and friends added to the general user. The message will be indicating that the user is in danger so his/her friends and police will be able to trace the user as the user’s location is shared to the police and his/her friends. They can come and help him/her out from the danger.</h3>
     </div>
 
