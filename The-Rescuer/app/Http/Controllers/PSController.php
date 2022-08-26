@@ -27,6 +27,16 @@ class PSController extends Controller
         else {return view('auth.login');}
     }
 
+    public function DeletePoliceFunction(){
+        if (Auth::id()) {
+            $Police_t = Auth::user()->id;
+            $Police_t = Police_t::where('id', $Police_t)->get();
+            return view('PoliceStation.deletepolice', compact('Police_t'));
+        }
+        else {return view('auth.login');}
+    }
+
+
     
     public function SubmitPoliceFunction(Request $request)
     {

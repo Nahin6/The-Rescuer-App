@@ -79,6 +79,7 @@ Route::controller(PSController::class)->group(function () {
     // Route::get('/AddFirefighters','AddFirefightersFunction' );
 
     Route::get('/PoliceList','PoliceListFunction' );
+    Route::get('/deletepolice','DeletePoliceFunction' );
     
 
 });
