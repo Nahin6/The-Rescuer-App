@@ -58,6 +58,33 @@ class UserController extends Controller
         }
     }
 
+    //bristy
+    public function FireHelpFunction()
+    {
+        if(Auth::id())
+        {
+            
+            return view('user.FireHelp');
+        }
+        else
+        {
+            return view('auth.login');
+        }
+    }
+
+    public function AddFriendsFunction()
+    {
+        if(Auth::id())
+        {
+            
+            return view('user.AddFriends');
+        }
+        else
+        {
+            return view('auth.login');
+        }
+    }
+
     //nahin
     public function CHeckHelpStatusFunction()
     {

@@ -7,9 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="medicalpic">
+    <div class="policepic">
          
-        <img class="img" id="medipic" src="images/medicalhelp.jfif" alt="errr">
+        <img class="img" id="policepicture" id="medipic" src="images/policehelp.jfif" alt="errr">
     </div>
 </body>
 </html>

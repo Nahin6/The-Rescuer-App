@@ -59,4 +59,35 @@ class FireStationController extends Controller
         }
     } 
 
+    public function SeeFirefightersListFunction()
+    {
+
+        if (Auth::id()) {
+
+
+            $FireFighter_t= Auth::user()->id;
+            $FireFighter_t = FireFighter_t::where('FireStationID', $FireFighter_t)->get();
+
+            return view('FireStation.SeeFirefightersList', compact('FireFighter_t'));
+        } else {
+
+            return view('auth.login');
+        }
+    }
+
+    public function RemoveFirefightersFunction($id)
+    {
+
+        if (Auth::id()) {
+
+
+            $FireFighter_t = FireFighter_t::find($id);
+            $FireFighter_t->delete();
+            return redirect()->back();
+        } else {
+
+            return view('auth.login');
+        }
+    }
+
 }

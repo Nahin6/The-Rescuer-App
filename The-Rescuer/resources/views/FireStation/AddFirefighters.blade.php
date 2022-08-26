@@ -73,7 +73,7 @@
 
             <label for="ma">Male</label>
             <input type="radio" id="fe" value="Female" name="gender">
-            <label for="fe">Female</label> <br> <br>
+            <label for="fe">Female</label>
 
             <input type="radio" id="others" value="Others" name="gender">
             <label for="others">Others</label> <br> <br>

@@ -37,8 +37,8 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                         <li><a class="dropdown-item" id="dropItems" href="{{ url('AddFirefighters') }}">Add firefighters</a></li>
-                        <li><a class="dropdown-item" id="dropItems" href="">Remove firefighters</a></li>
-                        <li><a class="dropdown-item" id="dropItems" href="#">Check firefighters list</a></li>
+                        <li><a class="dropdown-item" id="dropItems" href="{{ url('SeeFirefightersList') }}">Remove firefighters</a></li>
+                        <li><a class="dropdown-item" id="dropItems" href="{{ url('SeeFirefightersList') }}">Check firefighters list</a></li>
 
                     </ul>
                 </li>
