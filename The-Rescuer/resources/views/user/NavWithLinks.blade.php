@@ -7,17 +7,17 @@
 <link rel="stylesheet" type="text/css" href="{{ url('css/hospital/theme.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/hospital/AddDoctor/style.css') }}">
 
-<<<<<<< HEAD
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsiSPDMZVYMdkPXe8PNMn4NVKd7TLGYdA&libraries=places"
     type="text/javascript"></script>
 
 
-=======
+
 <link rel="stylesheet" href="{{ url('css/hospital/AddDoctor/style.css') }}">
     <link rel="stylesheet" href="{{ url('css/User/PoliceHelp.css') }}">
->>>>>>> d820fc0afd654336a6f17341db3759ea82415347
+
 
 <nav class="navbar navbar-dark  navbar-expand-lg  sticky-top" id="navbar" >
     <div class="container-fluid">
