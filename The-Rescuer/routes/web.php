@@ -70,6 +70,8 @@ Route::controller(PSController::class)->group(function () {
 
     Route::get('/AddPolice','AddPoliceFunction' );
     Route::post('/SubmitPolice','SubmitPoliceFunction' );
+    Route::get('/PoliceList','PoliceListFunction' );
+    
 });
 
 
