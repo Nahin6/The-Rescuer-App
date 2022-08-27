@@ -232,12 +232,17 @@ class HospitalController extends Controller
         }
 
     }
-    public function ApproveAmbulanceRequestFunction(){
+    public function ApproveAmbulanceRequestFunction($id){
 
         if (Auth::id()) {
             $AmbulanceT = AmbulanceT::all();
 
-            return view('hospital.AssignAmbulance',compact ('AmbulanceT') );
+            $AmbulanceReqT = AmbulanceReqT::find($id);
+            $AmbulanceReqT->AmnulanceStatus = 'One Ambulance Assigned';
+            $AmbulanceReqT->save();
+
+
+            return view('hospital.AssignAmbulance',compact ('AmbulanceT','AmbulanceReqT')) ;
         }
 
         else {
@@ -251,7 +256,4 @@ class HospitalController extends Controller
 
 
   // ,$AmbulanceReqT->id
-            // $AppointmentT = AmbulanceReqT::find($id);
-            // $AppointmentT->AmnulanceStatus = 'One Ambulance Assigned';
-            // $AppointmentT->save();
-            // compact ('AmbulanceReqT')
+
