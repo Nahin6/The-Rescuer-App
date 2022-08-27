@@ -7,8 +7,17 @@
 <link rel="stylesheet" type="text/css" href="{{ url('css/hospital/theme.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url('css/hospital/AddDoctor/style.css') }}">
 
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsiSPDMZVYMdkPXe8PNMn4NVKd7TLGYdA&libraries=places"
+    type="text/javascript"></script>
+
+
+
 <link rel="stylesheet" href="{{ url('css/hospital/AddDoctor/style.css') }}">
     <link rel="stylesheet" href="{{ url('css/User/PoliceHelp.css') }}">
+
 
 <nav class="navbar navbar-dark  navbar-expand-lg  sticky-top" id="navbar" >
     <div class="container-fluid">
@@ -82,12 +91,12 @@
                          Complain Status
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item"id="dropItems" href="{{ url('CHeckHelpStatus') }}">Check help Status</a></li>
-                        <li><a class="dropdown-item"id="dropItems" href="#">Check Ambulance Status</a></li>
+                        <li><a class="dropdown-item"id="dropItems" href="{{ url('CHeckHelpStatus') }}">Check Doctor help Status</a></li>
+                        <li><a class="dropdown-item"id="dropItems" href="{{ url('CHeckAmbulanceHelpStatus') }}">Check Ambulance Status</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item"id="dropItems" href="{{ url('CHeckHelpStatus') }}">Check Police help Status</a></li>
+                        <li><a class="dropdown-item"id="dropItems" href="{{ url('CHeckPoliceHelpStatus') }}">Check Police help Status</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -123,3 +132,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
 </script>
+

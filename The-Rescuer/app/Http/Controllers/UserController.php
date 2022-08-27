@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\AppointmentT;
-
+use App\Models\DoctorResponceT;
+use App\Models\AmbulanceReqT;
+use App\Models\AssignAmbulanceT;
+use App\Models\User;
 class UserController extends Controller
 {
 
@@ -47,7 +50,7 @@ class UserController extends Controller
     {
         if(Auth::id())
         {
-            
+
             return view('user.PoliceHelp');
         }
         else
@@ -61,7 +64,7 @@ class UserController extends Controller
     {
         if(Auth::id())
         {
-            
+
             return view('user.FireHelp');
         }
         else
@@ -74,7 +77,7 @@ class UserController extends Controller
     {
         if(Auth::id())
         {
-            
+
             return view('user.AddFriends');
         }
         else
@@ -89,8 +92,8 @@ class UserController extends Controller
         if (Auth::id()) {
             $username = Auth::user()->username;
             $AppointmentT = AppointmentT::where('PatientName', $username)->get();
-
-            return view('user.ViewHelpStatus', compact('AppointmentT'));
+            $DoctorResponceT= DoctorResponceT::all();
+            return view('user.ViewDoctorHelpStatus', compact('AppointmentT','DoctorResponceT'));
         } else {
             return view('auth.login');
         }
@@ -99,7 +102,7 @@ class UserController extends Controller
     //nahin
     public function CancelRequestFunction($id)
     {
-        
+
         if (Auth::id()) {
             $AppointmentT = AppointmentT::find($id);
             $AppointmentT->delete();
@@ -117,4 +120,36 @@ class UserController extends Controller
             return view('auth.login');
         }
     }
+    public function RequestForAmbulanceFunction(Request $request)
+    {
+        if (Auth::id()) {
+
+            $AmbulanceReqT = new AmbulanceReqT;
+
+            $AmbulanceReqT->username = Auth::user()->username;
+            $AmbulanceReqT->ContactNumber = Auth::user()->phone;
+            $AmbulanceReqT->Location =  $request->Location;
+            $AmbulanceReqT->AmnulanceStatus	='Pending';
+            $AmbulanceReqT->save();
+
+
+
+            return redirect()->back()->with('confirmation', 'Your Request was successfully sent to a Hospital Please Wait');
+        } else {
+            return view('auth.login');
+        }
+    }
+    public function CHeckAmbulanceHelpStatusFunction()
+    {
+        if (Auth::id()) {
+            $username = Auth::user()->username;
+            $AmbulanceReqT = AmbulanceReqT::where('username', $username)->get();
+            $AssignAmbulanceT = AssignAmbulanceT::all();
+            return view('user.TrackAmbulance', compact('AmbulanceReqT','AssignAmbulanceT'));
+        } else {
+            return view('auth.login');
+        }
+    }
 }
+
+

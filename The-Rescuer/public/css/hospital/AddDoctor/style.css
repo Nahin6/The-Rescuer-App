@@ -79,3 +79,33 @@ background-color: rgb(207, 207, 22);
     margin-left: 170px;
     text-align: center
 }
+/* doctortbrequest */
+.table_responsive{
+
+    color: rgb(247, 247, 247);
+}
+.table-row{
+
+
+    background-color: rgb(9, 39, 56);
+}
+#SIgnup-designOfdoc{
+
+    margin-top: 70px;
+    margin-bottom: 70px;
+       background-color: rgb(44, 117, 117);
+       border-radius: 5px;
+}
+.page-header
+{
+text-align: center;
+margin-top: 210px;
+font-size: 40px ;
+color: rgb(9, 135, 189);
+font-weight: bold;
+}
+.tableDesgin
+{
+
+color: rgb(3, 0, 0);
+}
