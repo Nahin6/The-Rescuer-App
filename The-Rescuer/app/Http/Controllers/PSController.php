@@ -35,6 +35,7 @@ class PSController extends Controller
         }
         else {return view('auth.login');}
     }
+    
     public function RemovePoliceFunction($id)
     {
 

@@ -8,7 +8,9 @@
   </head>
   <body >
     @include('PoliceStation.NavWithLinks')
+    @include('PoliceStation.PoliceBody')
     @include('user.MapPractice')
+    @include('admin.AdminFooter')
 
   </body>
 </html>

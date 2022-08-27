@@ -88,11 +88,11 @@ Route::controller(PSController::class)->group(function () {
 
     Route::get('/PoliceList','PoliceListFunction' );
     Route::get('/deletepolice','DeletePoliceFunction' );
-<<<<<<< HEAD
-    Route::get('/RemovePolice/{id}','RemovePoliceFunction' );    
-=======
 
->>>>>>> e68ee4762cf33790b09bc3e9eb9a5b53ec4c5cc5
+    Route::get('/RemovePolice/{id}','RemovePoliceFunction' );    
+
+
+
 
 });
 
@@ -102,6 +102,7 @@ Route::controller(FireStationController::class)->group(function () {
     Route::post('/SubmitFirefighters','SubmitFirefightersFunction' );
     Route::get('/SeeFirefightersList','SeeFirefightersListFunction' );
     Route::get('/RemoveFirefighters/{id}','RemoveFirefightersFunction' );
+    Route::get('/DeleteFirefighters','DeleteFirefightersFunction' );
 });
 
 
