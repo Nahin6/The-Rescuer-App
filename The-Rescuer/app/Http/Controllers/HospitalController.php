@@ -7,7 +7,9 @@ use Illuminate\Http\Request;
 use App\Models\doctorT;
 use App\Models\AppointmentT;
 use App\Models\AmbulanceT;
+use App\Models\AmbulanceReqT;
 use App\Models\User;
+use App\Models\AssignAmbulanceT;
 use Google\Service\CloudSearch\Id;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
@@ -50,7 +52,7 @@ class HospitalController extends Controller
                 'email'=>$request->email,
                 'dob'=>$request->DoctorDOB,
                 'password'=>$request->password='12345678',
-                
+
 
             ]);
             return redirect()->back()->with('success', 'Doctor Added Successfully');
@@ -82,7 +84,7 @@ class HospitalController extends Controller
     {
         if (Auth::id()) {
             $AppointmentT = AppointmentT::find($id);
-            $AppointmentT->status = 'Approved Please wait for doctor response';
+            $AppointmentT->status = 'Forward to a doctor';
             $AppointmentT->save();
             $doctorT = Auth::user()->id;
             $doctorT = doctorT::where('hospital_ID', $doctorT)->get();
@@ -182,6 +184,98 @@ class HospitalController extends Controller
             return view('auth.login');
         }
     }
-   
+    public function AssignDoctorFunction(Request $request){
+
+        if (Auth::id()) {
+
+            // AppointmentT::insert([
+
+            //     'SelcetedDoc'=>$request->AppointDoc,
+            //     'HospitalMessage'=>$request->HospitalMsg,
+
+
+            // ]);
+            return redirect()->back()->with('confirmation', 'A Doctor has been assigned');
+        } else {
+
+            return view('auth.login');
+        }
+
+    }
+    public function CHeckAmbulanceRequestFunction(){
+
+        if (Auth::id()) {
+
+            $AmbulanceReqT = AmbulanceReqT::all();;
+
+
+            return view('hospital.ViewAmbulanceRequest', compact ('AmbulanceReqT'));
+
+        }
+        else {
+
+            return view('auth.login');
+        }
+    }
+    public function RemoveAmbulanceRequestFunction($id){
+
+        if (Auth::id()) {
+
+            $AmbulanceT = AmbulanceReqT::find($id);
+            $AmbulanceT->delete();
+
+            return redirect()->back();
+
+        }
+        else {
+
+            return view('auth.login');
+        }
+
+    }
+    public function ApproveAmbulanceRequestFunction($id){
+
+        if (Auth::id()) {
+            $AmbulanceT = AmbulanceT::all();
+
+            $AmbulanceReqT = AmbulanceReqT::find($id);
+            $AmbulanceReqT->AmnulanceStatus = 'One Ambulance Assigned';
+            $AmbulanceReqT->save();
+
+
+            return view('hospital.AssignAmbulance',compact ('AmbulanceT','AmbulanceReqT')) ;
+        }
+
+        else {
+
+            return view('auth.login');
+        }
+
+    }
+    public function AssignAmbulanceFunction(Request $request ){
+
+        if (Auth::id()) {
+
+            $AssignAmbulanceT = new AssignAmbulanceT;
+            $AssignAmbulanceT->AssignDriver = $request->AssignDriver;
+            $AssignAmbulanceT->ApproxTime = $request->ApproxTime;
+            $AssignAmbulanceT->save();
+
+
+
+
+            return redirect()->back()->with('confirmation', 'A  Ambulance has been assigned');
+        }
+
+        else {
+
+            return view('auth.login');
+        }
+
+    }
+
 }
+
+
+  // ,$AmbulanceReqT->id
 

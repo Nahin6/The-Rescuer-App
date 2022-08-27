@@ -51,7 +51,11 @@ Route::controller(HospitalController::class)->group(function () {
     Route::get('/RemoveDoctor/{id}','RemoveDoctorFunction' );
     Route::get('/RemoveAmbulance/{id}','RemoveAmbulanceFunction' );
     Route::get('/SeeAmbulanceList','SeeAmbulanceListFunction' );
-    
+    Route::post('/AssignDoctor','AssignDoctorFunction' );
+    Route::get('/CHeckAmbulanceRequest','CHeckAmbulanceRequestFunction' );
+    Route::get('/RemoveAmbulanceRequest/{id}','RemoveAmbulanceRequestFunction' );
+    Route::get('/ApproveAmbulanceRequest/{id}','ApproveAmbulanceRequestFunction' );
+    Route::post('/AssignAmbulance','AssignAmbulanceFunction' );
 });
 Route::controller(UserController::class)->group(function () {
 
@@ -61,14 +65,20 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/CancelRequest/{id}', 'CancelRequestFunction');
     Route::get('/PoliceHelp', 'PoliceHelpFunction');
     Route::get('/AmbulanceHelp','AmbulanceHelpFunction' );
+
+    Route::post('/RequestForAmbulance','RequestForAmbulanceFunction' );
+    Route::get('/CHeckAmbulanceHelpStatus','CHeckAmbulanceHelpStatusFunction' );
+
     Route::get('/FireHelp', 'FireHelpFunction');
     Route::get('/AddFriends', 'AddFriendsFunction');
     Route::post('/SubmitFriends','SubmitFriendsFunction' );
+
 });
 Route::controller(DoctorController::class)->group(function () {
 
     Route::get('/ViewUserHelpRequests', 'ViewUserHelpRequestsFunction');
-
+    Route::get('/GiveSolutionToUser', 'GiveSolutionToUserFunction');
+    Route::post('/SubmitSolutionToUser', 'SubmitSolutionToUserFunction');
 });
 
 Route::controller(PSController::class)->group(function () {
@@ -78,7 +88,11 @@ Route::controller(PSController::class)->group(function () {
 
     Route::get('/PoliceList','PoliceListFunction' );
     Route::get('/deletepolice','DeletePoliceFunction' );
+<<<<<<< HEAD
     Route::get('/RemovePolice/{id}','RemovePoliceFunction' );    
+=======
+
+>>>>>>> e68ee4762cf33790b09bc3e9eb9a5b53ec4c5cc5
 
 });
 

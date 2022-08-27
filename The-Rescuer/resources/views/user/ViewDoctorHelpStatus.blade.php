@@ -1,8 +1,15 @@
 
-    {{-- nav --}}
-    @include('user.NavWithLinks')
-    {{-- nav  close --}}
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    @include('user.NavWithLinks')
     <table class="table mt-lg-5">
 
         <tr>
@@ -43,18 +50,7 @@
     </table>
 
 
-    {{-- @if (session()->has('confirm'))
-    <div style="font-weight: 900; font-size: 20px; color: rgb(173, 37, 27);" class="alert alert-success ">
-        <button type="button" class="close" data-dismiss="alert">X</button>
-        {{ session()->get('confirm') }}
 
-    </div>
-@endif --}}
-
-<div>
-
-    @include('user.ViewDoctorFeedBack')
-
-</div>
-
-
+        @include('user.ViewDoctorFeedBack')
+</body>
+</html>
