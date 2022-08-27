@@ -90,4 +90,13 @@ class FireStationController extends Controller
         }
     }
 
+    public function DeleteFirefightersFunction(){
+        if (Auth::id()) {
+            $FireFighter_t = Auth::user()->id;
+            $FireFighter_t = FireFighter_t::where('FireStationID', $FireFighter_t)->get();
+            return view('FireStation.RemoveFirefighters', compact('FireFighter_t'));
+        }
+        else {return view('auth.login');}
+    }
+
 }

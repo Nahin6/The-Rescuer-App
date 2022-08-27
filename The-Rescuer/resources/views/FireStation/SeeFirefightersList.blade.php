@@ -10,7 +10,7 @@
         <th scope="col">Contact Number</th>
         <th scope="col">Department</th>
         <th scope="col">Position</th>
-        <th scope="col">Remove Firefighter</th>
+        {{-- <th scope="col">Remove Firefighter</th> --}}
     </tr>
 
     <tbody>
@@ -26,13 +26,13 @@
 
 
 
-            <td>    <a type="button" style="color:rgb(0, 6, 0); background-color:rgb(223, 92, 65)" onClick="return confirm('Are you sure')" class="btn btn-danger  m-2" href="{{ url('RemoveFirefighters',$FireFighter->id) }} ">Remove</a>
+           {{-- <td>    <a type="button" style="color:rgb(0, 6, 0); background-color:rgb(223, 92, 65)" onClick="return confirm('Are you sure')" class="btn btn-danger  m-2" href="{{ url('RemoveFirefighters',$FireFighter->id) }} ">Remove</a>
 
-                {{-- @if ($doctor->username == $username)
+                 @if ($doctor->username == $username)
                 @else
                 <h1  style=" color:rgb(225, 16, 16) ;font-size:26px; font-weight:bold;">Remvoed</h1>
-                @endif --}}
-            </td>
+                @endif  
+             </td> --}}
 
 
 
