@@ -18,14 +18,14 @@
         <tr>
             <td>{{ $Police->id}}</td>
             <td>{{ $Police->first_name}}</td>
-            <td>{{ $police->last_name }}</td>
-            <td>{{ $police->email }}</td>
-            <td>{{ $police->ContactNumber }}</td>
-            <td>{{ $police->Department }}</td>
-            <td>{{ $police->Position }}</td>
-            <td><a type="button" style="color:rgb(0, 6, 0); background-color:rgb(223, 92, 65)" onClick="return confirm('Are you sure')" class="btn btn-danger  m-2" href="{{ url('RemoveDoctor',$Police->id) }} ">Remove</a></td>
+            <td>{{ $Police->last_name }}</td>
+            <td>{{ $Police->email }}</td>
+            <td>{{ $Police->ContactNumber }}</td>
+            <td>{{ $Police->Department }}</td>
+            <td>{{ $Police->Position }}</td>
+            <td><a type="button" style="color:rgb(0, 6, 0); background-color:rgb(223, 92, 65)" onClick="return confirm('Are you sure')" class="btn btn-danger  m-2" href="{{ url('RemovePolice',$Police->id) }} ">Remove</a></td>
 
         </tr>
         @endforeach
     </tbody>
-</table>
+</table
