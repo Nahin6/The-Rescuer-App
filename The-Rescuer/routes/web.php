@@ -55,6 +55,7 @@ Route::controller(HospitalController::class)->group(function () {
     Route::get('/CHeckAmbulanceRequest','CHeckAmbulanceRequestFunction' );
     Route::get('/RemoveAmbulanceRequest/{id}','RemoveAmbulanceRequestFunction' );
     Route::get('/ApproveAmbulanceRequest/{id}','ApproveAmbulanceRequestFunction' );
+    Route::post('/AssignAmbulance','AssignAmbulanceFunction' );
 });
 Route::controller(UserController::class)->group(function () {
 
@@ -85,11 +86,13 @@ Route::controller(PSController::class)->group(function () {
     Route::get('/AddPolice','AddPoliceFunction' );
     Route::post('/SubmitPolice','SubmitPoliceFunction' );
 
-    // Route::get('/AddFirefighters','AddFirefightersFunction' );
-
     Route::get('/PoliceList','PoliceListFunction' );
     Route::get('/deletepolice','DeletePoliceFunction' );
-    
+<<<<<<< HEAD
+    Route::get('/RemovePolice/{id}','RemovePoliceFunction' );    
+=======
+
+>>>>>>> e68ee4762cf33790b09bc3e9eb9a5b53ec4c5cc5
 
 });
 

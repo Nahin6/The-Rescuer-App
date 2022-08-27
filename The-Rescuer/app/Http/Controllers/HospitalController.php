@@ -9,6 +9,7 @@ use App\Models\AppointmentT;
 use App\Models\AmbulanceT;
 use App\Models\AmbulanceReqT;
 use App\Models\User;
+use App\Models\AssignAmbulanceT;
 use Google\Service\CloudSearch\Id;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
@@ -235,13 +236,35 @@ class HospitalController extends Controller
     public function ApproveAmbulanceRequestFunction($id){
 
         if (Auth::id()) {
+            $AmbulanceT = AmbulanceT::all();
+
+            $AmbulanceReqT = AmbulanceReqT::find($id);
+            $AmbulanceReqT->AmnulanceStatus = 'One Ambulance Assigned';
+            $AmbulanceReqT->save();
 
 
-            $AppointmentT = AmbulanceReqT::find($id);
-            $AppointmentT->AmnulanceStatus = 'One Ambulance Assigned';
-            $AppointmentT->save();
+            return view('hospital.AssignAmbulance',compact ('AmbulanceT','AmbulanceReqT')) ;
+        }
 
-            return redirect()->back();
+        else {
+
+            return view('auth.login');
+        }
+
+    }
+    public function AssignAmbulanceFunction(Request $request ){
+
+        if (Auth::id()) {
+
+            $AssignAmbulanceT = new AssignAmbulanceT;
+            $AssignAmbulanceT->AssignDriver = $request->AssignDriver;
+            $AssignAmbulanceT->ApproxTime = $request->ApproxTime;
+            $AssignAmbulanceT->save();
+
+
+
+
+            return redirect()->back()->with('confirmation', 'A  Ambulance has been assigned');
         }
 
         else {
@@ -254,4 +277,5 @@ class HospitalController extends Controller
 }
 
 
+  // ,$AmbulanceReqT->id
 

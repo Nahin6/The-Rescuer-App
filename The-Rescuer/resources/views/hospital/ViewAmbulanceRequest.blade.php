@@ -22,7 +22,7 @@
 
 
 
-            <td>    <a type="button" style="color:rgb(0, 6, 0); background-color:rgb(21, 210, 81)" onClick="return confirm('Are you sure')" class="btn btn-danger  m-2" href="{{ url('ApproveAmbulanceRequest',$AmbulanceReqT->id) }} ">Approve</a>
+            <td>    <a type="button" style="color:rgb(0, 6, 0); background-color:rgb(21, 210, 81)"  class="btn btn-danger  m-2" href="{{ url('ApproveAmbulanceRequest',$AmbulanceReqT->id) }} ">Assign</a>
 
                 {{-- @if ($doctor->username == $username)
                 @else
