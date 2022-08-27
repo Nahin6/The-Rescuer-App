@@ -14,7 +14,7 @@
     {{-- nav --}}
 
     {{-- nav  close --}}
-<h1 class="page-header">See What Doctor suggested</h1>
+{{-- <h1 class="page-header">Track Ambulance Information</h1> --}}
     <table class="table mt-lg-5">
 
         <tr style="background-color: rgb(7, 136, 97);">

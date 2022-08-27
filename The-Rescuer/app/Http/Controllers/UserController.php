@@ -63,7 +63,7 @@ class UserController extends Controller
     {
         if(Auth::id())
         {
-            
+
             return view('user.FireHelp');
         }
         else
@@ -76,7 +76,7 @@ class UserController extends Controller
     {
         if(Auth::id())
         {
-            
+
             return view('user.AddFriends');
         }
         else
@@ -92,7 +92,7 @@ class UserController extends Controller
             $username = Auth::user()->username;
             $AppointmentT = AppointmentT::where('PatientName', $username)->get();
             $DoctorResponceT= DoctorResponceT::all();
-            return view('user.ViewHelpStatus', compact('AppointmentT','DoctorResponceT'));
+            return view('user.ViewDoctorHelpStatus', compact('AppointmentT','DoctorResponceT'));
         } else {
             return view('auth.login');
         }
@@ -142,8 +142,8 @@ class UserController extends Controller
     {
         if (Auth::id()) {
             $username = Auth::user()->username;
-            $AppointmentT = AmbulanceReqT::where('username', $username)->get();
-            return view('user.TrackAmbulance', compact('AppointmentT'));
+            $AmbulanceReqT = AmbulanceReqT::where('username', $username)->get();
+            return view('user.TrackAmbulance', compact('AmbulanceReqT'));
         } else {
             return view('auth.login');
         }
