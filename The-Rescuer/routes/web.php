@@ -64,14 +64,14 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/CancelRequest/{id}', 'CancelRequestFunction');
     Route::get('/PoliceHelp', 'PoliceHelpFunction');
     Route::get('/AmbulanceHelp','AmbulanceHelpFunction' );
-<<<<<<< HEAD
+
     Route::post('/RequestForAmbulance','RequestForAmbulanceFunction' );
     Route::get('/CHeckAmbulanceHelpStatus','CHeckAmbulanceHelpStatusFunction' );
-=======
+
     Route::get('/FireHelp', 'FireHelpFunction');
     Route::get('/AddFriends', 'AddFriendsFunction');
     Route::post('/SubmitFriends','SubmitFriendsFunction' );
->>>>>>> d820fc0afd654336a6f17341db3759ea82415347
+
 });
 Route::controller(DoctorController::class)->group(function () {
 
