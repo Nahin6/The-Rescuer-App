@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\AppointmentT;
 use App\Models\DoctorResponceT;
 use App\Models\AmbulanceReqT;
+use App\Models\AssignAmbulanceT;
 use App\Models\User;
 class UserController extends Controller
 {
@@ -143,7 +144,8 @@ class UserController extends Controller
         if (Auth::id()) {
             $username = Auth::user()->username;
             $AmbulanceReqT = AmbulanceReqT::where('username', $username)->get();
-            return view('user.TrackAmbulance', compact('AmbulanceReqT'));
+            $AssignAmbulanceT = AssignAmbulanceT::all();
+            return view('user.TrackAmbulance', compact('AmbulanceReqT','AssignAmbulanceT'));
         } else {
             return view('auth.login');
         }

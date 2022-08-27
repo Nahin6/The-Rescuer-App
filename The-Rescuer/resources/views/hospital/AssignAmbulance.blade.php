@@ -18,14 +18,14 @@
         <p style="font-weight: 900; font-size: 40px; color: rgb(173, 37, 27);">Assign a Ambulance to Patient</p>
         <br>
         <label for="Address" class="form-label">Select a Driver:</label>
-        <select name="AppointDoc" id="form-design" style="width: 100%; text-align: center">>
+        <select name="AssignDriver" id="form-design" style="width: 100%; text-align: center">>
             @foreach ($AmbulanceT as $AmbulanceT)
             <option value="{{ $AmbulanceT->DriverName }}">{{ $AmbulanceT->DriverName }}</option>
             @endforeach
         </select>
 
         <label for="Address" class="form-label mt-4">Approximate time to Arrive in Location:</label>
-        <input type="textarea" name="timeToArrive" placeholder="Details " class=" form-control my-3 py-3 p-1"
+        <input type="text" name="ApproxTime" placeholder="Details " class=" form-control my-3 py-3 p-1"
             id="form-design"onfocus="this.placeholder=''" onblur="this.placeholder='Details '" required>
 {{--
         <label for="gender" id="gender" class="mt-4">
