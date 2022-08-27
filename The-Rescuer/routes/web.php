@@ -55,6 +55,7 @@ Route::controller(HospitalController::class)->group(function () {
     Route::get('/CHeckAmbulanceRequest','CHeckAmbulanceRequestFunction' );
     Route::get('/RemoveAmbulanceRequest/{id}','RemoveAmbulanceRequestFunction' );
     Route::get('/ApproveAmbulanceRequest/{id}','ApproveAmbulanceRequestFunction' );
+    Route::post('/AssignAmbulance','AssignAmbulanceFunction' );
 });
 Route::controller(UserController::class)->group(function () {
 
